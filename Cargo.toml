@@ -166,6 +166,12 @@ bin = [
   { name = "macros3_sol", path = "solutions/21_macros/macros3.rs" },
   { name = "macros4", path = "exercises/21_macros/macros4.rs" },
   { name = "macros4_sol", path = "solutions/21_macros/macros4.rs" },
+  { name = "clippy1", path = "exercises/22_clippy/clippy1.rs" },
+  { name = "clippy1_sol", path = "solutions/22_clippy/clippy1.rs" },
+  { name = "clippy2", path = "exercises/22_clippy/clippy2.rs" },
+  { name = "clippy2_sol", path = "solutions/22_clippy/clippy2.rs" },
+  { name = "clippy3", path = "exercises/22_clippy/clippy3.rs" },
+  { name = "clippy3_sol", path = "solutions/22_clippy/clippy3.rs" },
 ]
 
 [package]

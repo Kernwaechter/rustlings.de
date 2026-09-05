@@ -1179,3 +1179,43 @@ eine gründlichere Einführung kannst du dir „The Little Book of Rust
 Macros“ durchlesen:
 https://veykril.github.io/tlborm/
 """
+
+[[exercises]]
+name = "clippy1"
+dir = "22_clippy"
+test = false
+strict_clippy = true
+hint = """
+Rust speichert die Version mit der höchsten Präzision einiger langer oder
+unendlich präziser mathematischer Konstanten in der Rust-Standardbibliothek:
+https://doc.rust-lang.org/stable/std/f32/consts/index.html
+
+Wir könnten versucht sein, unsere eigenen Näherungswerte für bestimmte
+mathematische Konstanten zu benutzen, aber Clippy erkennt diese ungenauen
+mathematischen Konstanten als mögliche Fehlerquelle.
+
+Schau dir die Vorschläge der Clippy-Warnung in der Kompilierausgabe an und
+benutze die passende Ersatzkonstante aus `std::f32::consts`.
+"""
+
+[[exercises]]
+name = "clippy2"
+dir = "22_clippy"
+test = false
+strict_clippy = true
+hint = """
+`for`-Schleifen über `Option`-Werte lassen sich klarer als
+`if-let`-Anweisung ausdrücken.
+
+Nicht nötig, um diese Übung zu lösen, aber falls es dich interessiert,
+wann das Iterieren über `Option` nützlich sein kann, lies den folgenden
+Abschnitt der Dokumentation:
+https://doc.rust-lang.org/std/option/#iterating-over-option
+"""
+
+[[exercises]]
+name = "clippy3"
+dir = "22_clippy"
+test = false
+strict_clippy = true
+hint = "Diesmal keine Hinweise!"
