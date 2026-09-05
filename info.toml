@@ -780,3 +780,61 @@ hint = """
 Verwandter Abschnitt in „The Book“:
 https://doc.rust-lang.org/book/ch10-01-syntax.html#in-method-definitions
 """
+
+[[exercises]]
+name = "traits1"
+dir = "15_traits"
+hint = """
+Mehr über Traits in „The Book“:
+https://doc.rust-lang.org/book/ch10-02-traits.html
+
+Der `+`-Operator kann einen `String` mit einem `&str` verketten.
+"""
+
+[[exercises]]
+name = "traits2"
+dir = "15_traits"
+hint = """
+Beachte, dass der Trait `self` übernimmt (Ownership) und `Self`
+zurückgibt.
+
+Obwohl die Signatur von `append_bar` im Trait `self` als Argument nimmt,
+kann die Implementierung stattdessen `mut self` nehmen. Das ist möglich,
+weil der Wert ohnehin im eigenen Besitz ist.
+"""
+
+[[exercises]]
+name = "traits3"
+dir = "15_traits"
+hint = """
+Traits können eine Standardimplementierung für Funktionen haben. Datentypen,
+die den Trait implementieren, können dann die Standardversion dieser
+Funktionen benutzen, wenn sie die Funktion nicht selbst implementieren
+wollen.
+
+Verwandter Abschnitt in „The Book“:
+https://doc.rust-lang.org/book/ch10-02-traits.html#default-implementations
+"""
+
+[[exercises]]
+name = "traits4"
+dir = "15_traits"
+hint = """
+Statt konkreter Typen als Parameter kannst du Traits benutzen. Versuche,
+`???` durch `impl [was gehört hierhin?]` zu ersetzen.
+
+Verwandter Abschnitt in „The Book“:
+https://doc.rust-lang.org/book/ch10-02-traits.html#traits-as-parameters
+"""
+
+[[exercises]]
+name = "traits5"
+dir = "15_traits"
+hint = """
+Um sicherzustellen, dass ein Parameter mehrere Traits implementiert,
+benutze die '+'-Syntax. Versuche, `???` durch
+'impl [was gehört hierhin?] + [was gehört hierhin?]' zu ersetzen.
+
+Verwandter Abschnitt in „The Book“:
+https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bounds-with-the--syntax
+"""
