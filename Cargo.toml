@@ -188,6 +188,8 @@ bin = [
   { name = "quiz2_sol", path = "solutions/quizzes/quiz2.rs" },
   { name = "quiz3", path = "exercises/quizzes/quiz3.rs" },
   { name = "quiz3_sol", path = "solutions/quizzes/quiz3.rs" },
+  { name = "async1", path = "exercises/24_async/async1.rs" },
+  { name = "async1_sol", path = "solutions/24_async/async1.rs" },
 ]
 
 [package]
@@ -198,3 +200,4 @@ license = "MIT"
 publish = false
 
 [dependencies]
+tokio = { version = "1", features = ["fs", "macros", "rt-multi-thread"] }

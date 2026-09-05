@@ -1303,3 +1303,18 @@ So gibst du einen Trait-Bound für einen impl-Block an:
 Das brauchst du eventuell:
 `use std::fmt::Display;`
 """
+
+[[exercises]]
+name = "async1"
+dir = "24_async"
+test = false
+hint = """
+Asynchrone Runtimes wie tokio können nur Tasks starten, die als
+async-Funktionen definiert sind, nicht als gewöhnliche. Füge das
+Schlüsselwort `async` vor dem Schlüsselwort `fn` der Funktion
+`calculate_mean_score` hinzu.
+
+Ein asynchroner Task kann darauf warten, dass ein anderer abgeschlossen
+ist, indem man ihn „awaited“. Füge `.await` nach den drei
+`mean_score_*`-Variablen hinzu, bevor du sie mit `unwrap()` entpackst.
+"""
