@@ -401,3 +401,50 @@ dass `string_uppercase` die Daten nicht mehr bearbeiten kann.
 Sobald du das behoben hast, muss auch die Funktionssignatur von
 `string_uppercase` angepasst werden.
 """
+
+[[exercises]]
+name = "structs1"
+dir = "07_structs"
+hint = """
+Rust kennt mehr als eine Art von Struct. Genau genommen drei — alle
+Varianten werden genutzt, um zusammengehörige Daten zu bündeln.
+
+Es gibt reguläre Structs. Das sind benannte Sammlungen zusammengehöriger
+Daten, die in Feldern gespeichert sind.
+
+Tupel-Structs sind im Grunde einfach benannte Tupel.
+
+Und schließlich Unit-Structs. Diese haben keine Felder und sind nützlich
+für Generics.
+
+In dieser Übung musst du von jeder Art eine vervollständigen und
+implementieren.
+Mehr über Structs erfährst du in „The Book“:
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html
+"""
+
+[[exercises]]
+name = "structs2"
+dir = "07_structs"
+hint = """
+Instanzen von Structs zu erzeugen ist einfach — du musst nur seinen Feldern
+Werte zuweisen.
+
+Es gibt allerdings ein paar Abkürzungen, die man beim Instanziieren von
+Structs nehmen kann. Schau in „The Book“, um mehr zu erfahren:
+https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax
+"""
+
+[[exercises]]
+name = "structs3"
+dir = "07_structs"
+hint = """
+Für `is_international`: Was macht ein Paket international? Das scheint mit
+den Orten zusammenzuhängen, die es durchläuft, oder?
+
+Für `get_fees`: Diese Methode nimmt ein zusätzliches Argument entgegen —
+gibt es ein Feld im Struct `Package`, mit dem das zusammenhängt?
+
+Schau in „The Book“, um mehr über Methoden-Implementierungen zu erfahren:
+https://doc.rust-lang.org/book/ch05-03-method-syntax.html
+"""
