@@ -31,3 +31,97 @@ hint = """
 Der Compiler weist uns darauf hin, dass wir den Namen des Print-Makros falsch
 geschrieben haben. Er schlägt auch eine Alternative vor.
 """
+
+[[exercises]]
+name = "variables1"
+dir = "01_variables"
+test = false
+hint = """
+Der Deklaration in der `main`-Funktion fehlt ein Schlüsselwort, das in Rust
+nötig ist, um eine neue Variablenbindung zu erzeugen.
+"""
+
+[[exercises]]
+name = "variables2"
+dir = "01_variables"
+test = false
+hint = """
+Die Compiler-Meldung sagt, dass Rust den Typ der Variablenbindung `x` nicht
+mit dem hier gegebenen Wert in Einklang bringen kann.
+
+Was passiert, wenn du die erste Zeile in der `main`-Funktion mit einer
+Typ-Annotation versiehst?
+
+Was, wenn du `x` einen Wert gibst?
+
+Was, wenn du beides tust?
+
+Welchen Typ sollte `x` überhaupt haben?
+
+Was, wenn `x` denselben Typ wie `10` hat? Was, wenn es ein anderer Typ ist?
+"""
+
+[[exercises]]
+name = "variables3"
+dir = "01_variables"
+test = false
+hint = """
+In dieser Übung haben wir eine Variablenbindung, die wir in der
+`main`-Funktion erzeugt haben, und wir versuchen, sie in der nächsten Zeile zu
+benutzen — aber wir haben ihr noch keinen Wert gegeben.
+
+Wir können nichts ausgeben, das es nicht gibt; versuch, `x` einen Wert zu
+geben!
+
+Das ist ein Fehler, der in jeder Programmiersprache sehr leicht passieren und
+Bugs verursachen kann — zum Glück hat der Rust-Compiler das für uns erkannt!
+"""
+
+[[exercises]]
+name = "variables4"
+dir = "01_variables"
+test = false
+hint = """
+In Rust sind Variablenbindungen standardmäßig unveränderlich. Aber hier
+versuchen wir, `x` einen anderen Wert zuzuweisen! Es gibt ein Schlüsselwort,
+mit dem wir eine Variablenbindung stattdessen veränderlich machen können.
+"""
+
+[[exercises]]
+name = "variables5"
+dir = "01_variables"
+test = false
+hint = """
+Bei `variables4` haben wir schon gelernt, wie man eine unveränderliche
+Variable mit einem speziellen Schlüsselwort veränderlich macht. Leider hilft
+uns das hier nicht viel weiter, weil wir einer bestehenden Variable einen Wert
+eines anderen Typs zuweisen wollen. Manchmal möchte man auch bestehende
+Variablennamen wiederverwenden, weil man wie in dieser Übung nur Werte in
+andere Typen umwandelt.
+
+Zum Glück hat Rust dafür eine elegante Lösung: 'Shadowing'!
+Mehr über 'Shadowing' erfährst du im Abschnitt 'Variables and Mutability' des
+Buchs:
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
+
+Versuch anschließend, die Übung mit dieser Technik zu lösen.
+"""
+
+[[exercises]]
+name = "variables6"
+dir = "01_variables"
+test = false
+hint = """
+Wir kennen bereits Variablen und Veränderlichkeit, aber es gibt noch eine
+weitere wichtige Art von Variable: Konstanten.
+
+Konstanten sind immer unveränderlich. Sie werden mit dem Schlüsselwort
+`const` statt `let` deklariert.
+
+Der Typ von Konstanten muss immer angegeben werden.
+
+Mehr über Konstanten und die Unterschiede zwischen Variablen und Konstanten
+erfährst du im Abschnitt 'Constants' im Buch-Kapitel 'Variables and
+Mutability':
+https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#constants
+"""
