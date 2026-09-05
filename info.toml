@@ -479,3 +479,67 @@ Erzeuge dann einen match-Ausdruck in `process()`.
 Beachte, dass du einige Message-Varianten im match-Ausdruck destrukturieren
 musst, um an die Werte der Variante zu kommen.
 """
+
+[[exercises]]
+name = "strings1"
+dir = "09_strings"
+test = false
+hint = """
+Die Funktion `current_favorite_color` gibt aktuell einen String-Slice mit
+der Lifetime `'static` zurück. Wir wissen das, weil die Daten des Strings
+direkt in unserem Code selbst leben — sie kommen nicht aus einer Datei, von
+Nutzereingaben oder einem anderen Programm — deshalb leben sie so lange wie
+unser Programm.
+
+Es ist aber trotzdem ein String-Slice. Es gibt einen Weg, daraus einen
+`String` zu erzeugen, indem man einen String-Slice umwandelt (behandelt im
+Strings-Kapitel des Buchs), und einen weiteren Weg, der den `From`-Trait
+nutzt.
+"""
+
+[[exercises]]
+name = "strings2"
+dir = "09_strings"
+test = false
+hint = """
+Ja, es wäre wirklich einfach, das zu beheben, indem man den an `word`
+gebundenen Wert einfach zu einem String-Slice statt einem `String` macht,
+oder? Es gibt aber einen Weg, ein einziges Zeichen zur `if`-Anweisung
+hinzuzufügen, das den `String` in einen String-Slice umwandelt (coerced).
+
+Randnotiz: Wenn dich interessiert, wie diese Art von Referenz-Umwandlung
+funktioniert, kannst du im Buch vorausspringen und diesen Teil im
+Smart-Pointers-Kapitel lesen:
+https://doc.rust-lang.org/book/ch15-02-deref.html#implicit-deref-coercions-with-functions-and-methods
+"""
+
+[[exercises]]
+name = "strings3"
+dir = "09_strings"
+hint = """
+Es gibt viele nützliche Standardbibliotheks-Funktionen für Strings. Lass uns
+ein paar davon benutzen:
+https://doc.rust-lang.org/std/string/struct.String.html#method.trim
+
+Für die Methode `compose_me`: Du kannst entweder das Makro `format!`
+benutzen, oder den String-Slice in einen eigenen String umwandeln, den du
+dann frei erweitern kannst.
+
+Für die Methode `replace_me` schau dir die Methode `replace` an:
+https://doc.rust-lang.org/std/string/struct.String.html#method.replace
+"""
+
+[[exercises]]
+name = "strings4"
+dir = "09_strings"
+test = false
+hint = """
+Ersetze `placeholder` in der `main`-Funktion entweder durch `string` oder
+`string_slice`.
+
+Beispiel:
+`placeholder("blau");`
+wird zu
+`string_slice("blau");`
+weil "blau" ein `&str` ist, kein `String`.
+"""
