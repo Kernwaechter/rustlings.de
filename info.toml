@@ -656,3 +656,103 @@ Lies dir nach der vom Compiler vorgeschlagenen Korrektur die zugehörige
 Doku-Seite durch:
 https://doc.rust-lang.org/std/keyword.ref.html
 """
+
+[[exercises]]
+name = "errors1"
+dir = "13_error_handling"
+hint = """
+`Ok` und `Err` sind die zwei Varianten von `Result`. Die Tests sagen also,
+dass `generate_nametag_text` ein `Result` statt einer `Option` zurückgeben
+sollte.
+
+Um das zu ändern, musst du:
+  - den Rückgabetyp in der Funktionssignatur zu `Result<String, String>`
+    ändern, mit den möglichen Varianten `Ok(String)` und `Err(String)`
+  - den Funktionsrumpf so ändern, dass `Ok(…)` zurückgegeben wird, wo
+    aktuell `Some(…)` zurückgegeben wird
+  - den Funktionsrumpf so ändern, dass `Err(Fehlermeldung)` zurückgegeben
+    wird, wo aktuell `None` zurückgegeben wird
+"""
+
+[[exercises]]
+name = "errors2"
+dir = "13_error_handling"
+hint = """
+Ein Weg, das zu behandeln, ist eine `match`-Anweisung auf
+`item_quantity.parse::<i32>()`, deren Fälle `Ok(irgendwas)` und
+`Err(irgendwas)` sind.
+
+Dieses Muster ist in Rust aber so verbreitet, dass es dafür den
+`?`-Operator gibt, der genau das für dich erledigt, was diese
+match-Anweisung tun würde!
+
+Schau dir diesen Abschnitt des Kapitels „Error Handling“ an:
+https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
+"""
+
+[[exercises]]
+name = "errors3"
+dir = "13_error_handling"
+test = false
+hint = """
+Wenn andere Funktionen ein `Result` zurückgeben können, warum sollte
+`main` das nicht auch tun? Es ist eine ziemlich verbreitete Konvention,
+aus der `main`-Funktion so etwas wie `Result<(), FehlerTyp>`
+zurückzugeben.
+
+Der Einheitstyp `()` steht dort, weil im positiven Fall eigentlich nichts
+gebraucht wird.
+"""
+
+[[exercises]]
+name = "errors4"
+dir = "13_error_handling"
+hint = """
+`PositiveNonzeroInteger::new` erzeugt immer eine neue Instanz und gibt ein
+`Ok`-Ergebnis zurück. Stattdessen sollte sie Prüfungen durchführen, einen
+`Err` zurückgeben, wenn diese Prüfungen fehlschlagen, und nur dann einen
+`Ok` zurückgeben, wenn diese Prüfungen ergeben, dass alles … okay ist :)
+"""
+
+[[exercises]]
+name = "errors5"
+dir = "13_error_handling"
+test = false
+hint = """
+Innerhalb der `main`-Funktion werden zwei verschiedene mögliche
+`Result`-Typen erzeugt, die mit dem `?`-Operator weitergereicht werden.
+Wie deklarieren wir einen Rückgabetyp für die `main`-Funktion, der beide
+zulässt?
+
+Unter der Haube ruft der `?`-Operator `From::from` auf dem Fehlerwert auf,
+um ihn in ein geboxtes Trait-Objekt umzuwandeln, ein `Box<dyn Error>`.
+Dieses geboxte Trait-Objekt ist polymorph, und da alle Fehler den Trait
+`Error` implementieren, können wir viele verschiedene Fehler in einem
+einzigen `Box`-Objekt einfangen.
+
+Schau dir diesen Abschnitt von „The Book“ an:
+https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
+
+Mehr über das Boxen von Fehlern:
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/boxing_errors.html
+
+Mehr über die Benutzung des `?`-Operators mit geboxten Fehlern:
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html
+"""
+
+[[exercises]]
+name = "errors6"
+dir = "13_error_handling"
+hint = """
+Diese Übung benutzt eine fertige Version von `PositiveNonzeroInteger` aus
+den vorherigen Übungen.
+
+Unterhalb der Zeile, die laut TODO geändert werden soll, gibt es ein
+Beispiel für die Benutzung der Methode `map_err()` auf einem `Result`, um
+einen Fehlertyp in einen anderen umzuwandeln. Versuche etwas Ähnliches auf
+dem `Result` von `parse()`. Danach kannst du den `?`-Operator benutzen, um
+frühzeitig zurückzukehren.
+
+Mehr über `map_err()` in der Dokumentation von `std::result`:
+https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err
+"""
