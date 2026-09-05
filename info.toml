@@ -297,3 +297,34 @@ Beispiel des Abschnitts 'Data Types -> The Tuple Type' des Buchs erklärt:
 https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
 Jetzt hast du ein weiteres Werkzeug in deinem Werkzeugkasten!
 """
+
+[[exercises]]
+name = "vecs1"
+dir = "05_vecs"
+hint = """
+In Rust gibt es zwei Wege, einen Vektor zu definieren.
+1. Der eine Weg ist, mit der Funktion `Vec::new()` einen neuen Vektor zu
+   erzeugen und ihn mit der Methode `push()` zu befüllen.
+2. Der zweite Weg ist, das Makro `vec![]` zu nutzen und deine Elemente
+   innerhalb der eckigen Klammern anzugeben. Dieser Weg ist einfacher, wenn
+   du die Anfangswerte genau kennst.
+
+Schau dir dieses Kapitel an: https://doc.rust-lang.org/book/ch08-01-vectors.html
+des Rust-Buchs, um mehr zu erfahren.
+"""
+
+[[exercises]]
+name = "vecs2"
+dir = "05_vecs"
+hint = """
+In der ersten Funktion erzeugen wir einen leeren Vektor und wollen neue
+Elemente an ihn anhängen.
+
+In der zweiten Funktion bilden wir die Werte der Eingabe ab (map) und
+sammeln sie in einem Vektor.
+
+Wenn du beide Funktionen fertiggestellt hast, entscheide für dich selbst,
+welchen Ansatz du besser findest.
+
+Was glaubst du, welches Muster unter Rust-Entwicklern gebräuchlicher ist?
+"""
