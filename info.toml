@@ -1131,3 +1131,51 @@ ursprünglichen Sendeendes erzeugt.
 Verwandter Abschnitt in „The Book“:
 https://doc.rust-lang.org/book/ch16-02-message-passing.html
 """
+
+[[exercises]]
+name = "macros1"
+dir = "21_macros"
+test = false
+hint = """
+Wenn du ein Makro aufrufst, musst du im Vergleich zu einem normalen
+Funktionsaufruf etwas Besonderes hinzufügen.
+"""
+
+[[exercises]]
+name = "macros2"
+dir = "21_macros"
+test = false
+hint = """
+Makros halten sich nicht ganz an dieselben Regeln wie der Rest von Rust,
+was verfügbar ist und wo.
+
+Anders als bei anderen Dingen in Rust spielt die Reihenfolge von „wo du ein
+Makro definierst“ gegenüber „wo du es benutzt“ tatsächlich eine Rolle.
+"""
+
+[[exercises]]
+name = "macros3"
+dir = "21_macros"
+test = false
+hint = """
+Um ein Makro außerhalb seines Moduls zu benutzen, musst du etwas
+Besonderes mit dem Modul tun, um das Makro in sein übergeordnetes Modul zu
+heben.
+"""
+
+[[exercises]]
+name = "macros4"
+dir = "21_macros"
+test = false
+hint = """
+Du musst nur ein einziges Zeichen hinzufügen, damit das kompiliert.
+
+So, wie Makros geschrieben werden, will es zwischen jedem „Makro-Arm“
+etwas sehen, um sie voneinander zu trennen.
+
+Das waren schon alle Makro-Übungen, die wir hier haben, aber das kratzt
+kaum an der Oberfläche dessen, was du mit Rusts Makros machen kannst. Für
+eine gründlichere Einführung kannst du dir „The Little Book of Rust
+Macros“ durchlesen:
+https://veykril.github.io/tlborm/
+"""
