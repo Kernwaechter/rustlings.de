@@ -1277,3 +1277,29 @@ hint = """
 Füge `AsRef<str>` oder `AsMut<u32>` als Trait-Bound zu den Funktionen
 hinzu.
 """
+
+[[exercises]]
+name = "quiz1"
+dir = "quizzes"
+hint = "Diesmal keine Hinweise ;)"
+
+[[exercises]]
+name = "quiz2"
+dir = "quizzes"
+hint = "Der Operator `+` kann einen `String` mit einem `&str` verketten."
+
+[[exercises]]
+name = "quiz3"
+dir = "quizzes"
+hint = """
+Um die beste Lösung für diese Herausforderung zu finden, musst du dich an
+dein Wissen über Traits erinnern, insbesondere an die
+„Trait-Bound-Syntax“:
+https://doc.rust-lang.org/book/ch10-02-traits.html#trait-bound-syntax
+
+So gibst du einen Trait-Bound für einen impl-Block an:
+`impl<T: Trait1 + Trait2 + …> for Foo<T> { … }`
+
+Das brauchst du eventuell:
+`use std::fmt::Display;`
+"""

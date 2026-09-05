@@ -182,6 +182,12 @@ bin = [
   { name = "conversions4_sol", path = "solutions/23_conversions/conversions4.rs" },
   { name = "conversions5", path = "exercises/23_conversions/conversions5.rs" },
   { name = "conversions5_sol", path = "solutions/23_conversions/conversions5.rs" },
+  { name = "quiz1", path = "exercises/quizzes/quiz1.rs" },
+  { name = "quiz1_sol", path = "solutions/quizzes/quiz1.rs" },
+  { name = "quiz2", path = "exercises/quizzes/quiz2.rs" },
+  { name = "quiz2_sol", path = "solutions/quizzes/quiz2.rs" },
+  { name = "quiz3", path = "exercises/quizzes/quiz3.rs" },
+  { name = "quiz3_sol", path = "solutions/quizzes/quiz3.rs" },
 ]
 
 [package]
