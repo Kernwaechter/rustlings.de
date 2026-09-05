@@ -328,3 +328,76 @@ welchen Ansatz du besser findest.
 
 Was glaubst du, welches Muster unter Rust-Entwicklern gebräuchlicher ist?
 """
+
+[[exercises]]
+name = "move_semantics1"
+dir = "06_move_semantics"
+hint = """
+Du bekommst also den Fehler „cannot borrow `vec` as mutable, as it is not
+declared as mutable“ in der Zeile, in der wir ein Element an den Vektor
+anhängen, richtig?
+
+Die Lösung dafür besteht darin, ein Schlüsselwort hinzuzufügen — und zwar
+NICHT in der Zeile, in der wir an den Vektor anhängen (wo der Fehler steht).
+
+Versuch, nach dem Aufruf von `fill_vec()` auf `vec0` zuzugreifen. Schau, was
+passiert!
+"""
+
+[[exercises]]
+name = "move_semantics2"
+dir = "06_move_semantics"
+hint = """
+Wenn du diese Übung zum ersten Mal ausführst, siehst du einen Fehler über
+„borrow of moved value“. In Rust kannst du, wenn ein Argument an eine
+Funktion übergeben wird und nicht explizit zurückgegeben wird, die
+ursprüngliche Variable nicht mehr benutzen. Das nennen wir das „Verschieben“
+(Moving) einer Variable. Wenn wir `vec0` an `fill_vec` übergeben, wird es
+nach `vec1` „verschoben“ — das heißt, wir können auf `vec0` nicht mehr
+zugreifen.
+
+Du könntest stattdessen eine weitere, eigenständige Kopie der Daten aus
+`vec0` erzeugen und diese an `fill_vec` übergeben. Das nennt man in Rust
+Klonen (Cloning).
+"""
+
+[[exercises]]
+name = "move_semantics3"
+dir = "06_move_semantics"
+hint = """
+Der Unterschied zwischen dieser Übung und den vorherigen ist, dass die erste
+Zeile von `fn fill_vec` mit `let mut vec = vec;` diesmal nicht mehr da ist.
+Du kannst, statt diese Zeile wieder hinzuzufügen, an EINER Stelle `mut`
+einfügen, um eine bestehende Bindung von einer unveränderlichen in eine
+veränderliche zu verwandeln :)
+"""
+
+[[exercises]]
+name = "move_semantics4"
+dir = "06_move_semantics"
+hint = """
+Überleg genau, in welchem Bereich (Scope) jede veränderliche Referenz
+gültig ist. Hilft es, den Wert von `x` direkt nach dem Erzeugen der
+veränderlichen Referenz zu verwenden?
+Lies mehr über 'Mutable References' im Abschnitt 'References and Borrowing'
+des Buchs:
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html#mutable-references.
+"""
+
+[[exercises]]
+name = "move_semantics5"
+dir = "06_move_semantics"
+test = false
+hint = """
+Um die Antwort zu finden, kannst du den Buch-Abschnitt „References and
+Borrowing“ zurate ziehen:
+https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
+
+Das erste Problem ist, dass `get_char` den Besitz des Strings übernimmt.
+Dadurch wird `data` verschoben und kann für `string_uppercase` nicht mehr
+benutzt werden. `data` wird zuerst nach `get_char` verschoben, was bedeutet,
+dass `string_uppercase` die Daten nicht mehr bearbeiten kann.
+
+Sobald du das behoben hast, muss auch die Funktionssignatur von
+`string_uppercase` angepasst werden.
+"""
