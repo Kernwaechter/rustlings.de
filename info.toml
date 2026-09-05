@@ -909,3 +909,98 @@ hinzufügen.
 Schau in die Doku:
 https://doc.rust-lang.org/book/ch11-01-writing-tests.html#checking-for-panics-with-should_panic
 """
+
+[[exercises]]
+name = "iterators1"
+dir = "18_iterators"
+hint = """
+Ein Iterator durchläuft alle Elemente einer Sammlung, aber was, wenn uns
+die Elemente ausgehen? Was sollten wir hier erwarten? Falls du nicht
+weiterkommst, schau dir das hier an:
+https://doc.rust-lang.org/std/iter/trait.Iterator.html
+"""
+
+[[exercises]]
+name = "iterators2"
+dir = "18_iterators"
+hint = """
+`capitalize_first`:
+
+Die Variable `first` ist ein `char`. Sie muss groß geschrieben und den
+restlichen Zeichen in `chars` hinzugefügt werden, um den richtigen `String`
+zurückzugeben.
+
+Die restlichen Zeichen in `chars` lassen sich mit der Methode `as_str` als
+String-Slice betrachten.
+
+Die Dokumentation zu `char` enthält viele nützliche Methoden.
+https://doc.rust-lang.org/std/primitive.char.html
+
+Benutze `char::to_uppercase`. Es gibt einen Iterator zurück, der in einen
+`String` umgewandelt werden kann.
+
+`capitalize_words_vector`:
+
+Erzeuge einen Iterator aus dem Slice. Transformiere die iterierten Werte,
+indem du die Funktion `capitalize_first` anwendest. Denk daran, den
+Iterator mit `collect` einzusammeln.
+
+`capitalize_words_string`:
+
+Das ist überraschend ähnlich zur vorherigen Lösung. `collect` ist sehr
+mächtig und sehr allgemein. Rust muss nur den gewünschten Typ kennen.
+"""
+
+[[exercises]]
+name = "iterators3"
+dir = "18_iterators"
+hint = """
+Die Funktion `divide` muss den richtigen Fehler zurückgeben, wenn der
+Divisor 0 ist oder wenn eine glatte Division nicht möglich ist.
+
+Die Variable `division_results` muss in einen Sammlungstyp (Collection)
+eingesammelt (collect) werden.
+
+Die Funktion `result_with_list` muss ein einzelnes `Result` zurückgeben,
+bei dem der Erfolgsfall ein Vektor von Ganzzahlen ist und der Fehlerfall
+ein `DivisionError`.
+
+Die Funktion `list_of_results` muss einen Vektor von Results zurückgeben.
+
+Schau dir an, wie der Trait `FromIterator` in `collect()` benutzt wird:
+https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.collect
+Dieser Trait ist WIRKLICH mächtig! Er kann die Lösung dieser Übung deutlich
+einfacher machen.
+"""
+
+[[exercises]]
+name = "iterators4"
+dir = "18_iterators"
+hint = """
+In einer imperativen Sprache würdest du vielleicht eine `for`-Schleife
+schreiben, die eine veränderliche Variable aktualisiert. Oder du würdest
+Code mit Rekursion und einer match-Anweisung schreiben. In Rust kannst du
+einen anderen, funktionalen Ansatz wählen und die Fakultät elegant mit
+Ranges und Iteratoren berechnen.
+
+Schau dir die Methoden `fold` und `rfold` an!
+"""
+
+[[exercises]]
+name = "iterators5"
+dir = "18_iterators"
+hint = """
+Die Dokumentation zum Trait `std::iter::Iterator` enthält zahlreiche
+Methoden, die hier hilfreich wären.
+
+Die Variable `collection` in `count_collection_iterator` ist ein Slice von
+`HashMap`s. Sie muss in einen Iterator umgewandelt werden, um die
+Iterator-Methoden benutzen zu können.
+
+Die Methode `fold` kann in der Funktion `count_collection_iterator`
+nützlich sein.
+
+Für eine zusätzliche Herausforderung: Schau in der Dokumentation zu
+`Iterator` nach einer anderen Methode, die deinen Code kompakter machen
+könnte als die Benutzung von `fold`.
+"""

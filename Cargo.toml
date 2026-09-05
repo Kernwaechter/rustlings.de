@@ -134,6 +134,16 @@ bin = [
   { name = "tests2_sol", path = "solutions/17_tests/tests2.rs" },
   { name = "tests3", path = "exercises/17_tests/tests3.rs" },
   { name = "tests3_sol", path = "solutions/17_tests/tests3.rs" },
+  { name = "iterators1", path = "exercises/18_iterators/iterators1.rs" },
+  { name = "iterators1_sol", path = "solutions/18_iterators/iterators1.rs" },
+  { name = "iterators2", path = "exercises/18_iterators/iterators2.rs" },
+  { name = "iterators2_sol", path = "solutions/18_iterators/iterators2.rs" },
+  { name = "iterators3", path = "exercises/18_iterators/iterators3.rs" },
+  { name = "iterators3_sol", path = "solutions/18_iterators/iterators3.rs" },
+  { name = "iterators4", path = "exercises/18_iterators/iterators4.rs" },
+  { name = "iterators4_sol", path = "solutions/18_iterators/iterators4.rs" },
+  { name = "iterators5", path = "exercises/18_iterators/iterators5.rs" },
+  { name = "iterators5_sol", path = "solutions/18_iterators/iterators5.rs" },
 ]
 
 [package]
