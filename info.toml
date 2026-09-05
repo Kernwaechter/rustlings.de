@@ -1219,3 +1219,61 @@ dir = "22_clippy"
 test = false
 strict_clippy = true
 hint = "Diesmal keine Hinweise!"
+
+[[exercises]]
+name = "conversions1"
+dir = "23_conversions"
+hint = """
+Benutze den Operator `as`, um einen der Operanden in der letzten Zeile der
+Funktion `average` in den erwarteten Rückgabetyp umzuwandeln.
+"""
+
+[[exercises]]
+name = "conversions2"
+dir = "23_conversions"
+hint = """
+Die Formel zur Umwandlung von Fahrenheit in Celsius lautet:
+C = (F - 32) / 1.8
+Das lässt sich aus der ersten Formel herleiten:
+
+             F = C * 1.8 + 32   // jetzt auf beiden Seiten 32 subtrahieren
+        F - 32 = C * 1.8        // dann durch 1.8 teilen
+(F - 32) / 1.8 = C
+"""
+
+[[exercises]]
+name = "conversions3"
+dir = "23_conversions"
+hint = """
+Die Implementierung von `FromStr` soll ein `Ok` mit einem `Person`-Objekt
+zurückgeben, oder ein `Err` mit einem Fehler, falls der String ungültig
+ist.
+
+Noch ein Hinweis: Du kannst die Methode `map_err` von `Result` mit einer
+Funktion oder einer Closure benutzen, um den Fehler von `parse::<u8>` zu
+umschließen.
+
+Und noch ein Hinweis: Wenn du in deiner Lösung Fehler mit dem
+`?`-Operator weiterreichen möchtest, wirf einen Blick auf
+https://doc.rust-lang.org/stable/rust-by-example/error/multiple_error_types/reenter_question_mark.html
+"""
+
+[[exercises]]
+name = "conversions4"
+dir = "23_conversions"
+hint = """
+Gibt es in der Standardbibliothek eine Implementierung von `TryFrom`, die
+sowohl die nötige Ganzzahlumwandlung vornehmen als auch den Bereich der
+Eingabe prüfen kann?
+
+Herausforderung: Kannst du die `TryFrom`-Implementierungen generisch über
+mehrere Ganzzahltypen gestalten?
+"""
+
+[[exercises]]
+name = "conversions5"
+dir = "23_conversions"
+hint = """
+Füge `AsRef<str>` oder `AsMut<u32>` als Trait-Bound zu den Funktionen
+hinzu.
+"""

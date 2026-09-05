@@ -172,6 +172,16 @@ bin = [
   { name = "clippy2_sol", path = "solutions/22_clippy/clippy2.rs" },
   { name = "clippy3", path = "exercises/22_clippy/clippy3.rs" },
   { name = "clippy3_sol", path = "solutions/22_clippy/clippy3.rs" },
+  { name = "conversions1", path = "exercises/23_conversions/conversions1.rs" },
+  { name = "conversions1_sol", path = "solutions/23_conversions/conversions1.rs" },
+  { name = "conversions2", path = "exercises/23_conversions/conversions2.rs" },
+  { name = "conversions2_sol", path = "solutions/23_conversions/conversions2.rs" },
+  { name = "conversions3", path = "exercises/23_conversions/conversions3.rs" },
+  { name = "conversions3_sol", path = "solutions/23_conversions/conversions3.rs" },
+  { name = "conversions4", path = "exercises/23_conversions/conversions4.rs" },
+  { name = "conversions4_sol", path = "solutions/23_conversions/conversions4.rs" },
+  { name = "conversions5", path = "exercises/23_conversions/conversions5.rs" },
+  { name = "conversions5_sol", path = "solutions/23_conversions/conversions5.rs" },
 ]
 
 [package]
