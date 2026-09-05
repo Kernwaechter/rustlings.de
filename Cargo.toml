@@ -64,6 +64,12 @@ bin = [
   { name = "structs2_sol", path = "solutions/07_structs/structs2.rs" },
   { name = "structs3", path = "exercises/07_structs/structs3.rs" },
   { name = "structs3_sol", path = "solutions/07_structs/structs3.rs" },
+  { name = "enums1", path = "exercises/08_enums/enums1.rs" },
+  { name = "enums1_sol", path = "solutions/08_enums/enums1.rs" },
+  { name = "enums2", path = "exercises/08_enums/enums2.rs" },
+  { name = "enums2_sol", path = "solutions/08_enums/enums2.rs" },
+  { name = "enums3", path = "exercises/08_enums/enums3.rs" },
+  { name = "enums3_sol", path = "solutions/08_enums/enums3.rs" },
 ]
 
 [package]

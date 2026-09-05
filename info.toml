@@ -448,3 +448,34 @@ gibt es ein Feld im Struct `Package`, mit dem das zusammenhängt?
 Schau in „The Book“, um mehr über Methoden-Implementierungen zu erfahren:
 https://doc.rust-lang.org/book/ch05-03-method-syntax.html
 """
+
+[[exercises]]
+name = "enums1"
+dir = "08_enums"
+test = false
+hint = """
+Diesmal kein Hinweis ;)
+"""
+
+[[exercises]]
+name = "enums2"
+dir = "08_enums"
+test = false
+hint = """
+Du kannst Enums erstellen, deren Varianten unterschiedliche Typen haben —
+zum Beispiel anonyme Structs, Structs, einen einzelnen String, Tupel, gar
+keine Daten usw.
+"""
+
+[[exercises]]
+name = "enums3"
+dir = "08_enums"
+hint = """
+Definiere als ersten Schritt die Enums, damit der Code fehlerfrei
+kompiliert.
+
+Erzeuge dann einen match-Ausdruck in `process()`.
+
+Beachte, dass du einige Message-Varianten im match-Ausdruck destrukturieren
+musst, um an die Werte der Variante zu kommen.
+"""
