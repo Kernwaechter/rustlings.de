@@ -756,3 +756,27 @@ frühzeitig zurückzukehren.
 Mehr über `map_err()` in der Dokumentation von `std::result`:
 https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err
 """
+
+[[exercises]]
+name = "generics1"
+dir = "14_generics"
+test = false
+hint = """
+Vektoren in Rust nutzen Generics, um dynamisch große Arrays von beliebigem
+Typ zu erzeugen.
+Wenn der Vektor `numbers` den Typ `Vec<T>` hat, können wir nur Werte vom
+Typ `T` hineinschieben. Indem wir vor dem Einfügen `into()` benutzen,
+bitten wir den Compiler, `n1` und `n2` nach `T` umzuwandeln. Aber der
+Compiler weiß noch nicht, was `T` ist, und braucht eine Typ-Annotation.
+
+`u8` und `i8` lassen sich beide nach `i16`, `i32` und `i64` umwandeln.
+Wähle einen davon für den generischen Typ des Vektors.
+"""
+
+[[exercises]]
+name = "generics2"
+dir = "14_generics"
+hint = """
+Verwandter Abschnitt in „The Book“:
+https://doc.rust-lang.org/book/ch10-01-syntax.html#in-method-definitions
+"""
