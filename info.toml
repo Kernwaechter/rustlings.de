@@ -185,3 +185,39 @@ Es gibt zwei Lösungen:
 1. Das Schlüsselwort `return` vor `num * num;` hinzufügen
 2. Das Semikolon `;` nach `num * num` entfernen
 """
+
+[[exercises]]
+name = "if1"
+dir = "03_if"
+hint = """
+Das lässt sich, wenn du magst, sogar in einer einzigen Zeile lösen!
+
+Ähnliche Beispiele aus anderen Sprachen:
+- In C(++) wäre das: `a > b ? a : b`
+- In Python wäre das: `a if a > b else b`
+
+Denk in Rust daran, dass:
+- die `if`-Bedingung keine Klammern braucht
+- `if`/`else`-Bedingungen Ausdrücke (Expressions) sind
+- auf jede Bedingung ein `{}`-Block folgt
+"""
+
+[[exercises]]
+name = "if2"
+dir = "03_if"
+hint = """
+Für den ersten Compiler-Fehler ist wichtig: In Rust muss jeder Zweig einer
+Bedingung denselben Typ zurückgeben!
+
+Um die Tests zum Bestehen zu bringen, brauchst du ein paar Bedingungen, die
+verschiedene Eingabewerte prüfen. Lies die Tests, um herauszufinden, was sie
+erwarten.
+"""
+
+[[exercises]]
+name = "if3"
+dir = "03_if"
+hint = """
+In Rust muss jeder Zweig eines `if`-Ausdrucks denselben Werttyp zurückgeben.
+Stell sicher, dass der Typ in allen Zweigen einheitlich ist.
+"""
