@@ -16,6 +16,16 @@ bin = [
   { name = "variables5_sol", path = "solutions/01_variables/variables5.rs" },
   { name = "variables6", path = "exercises/01_variables/variables6.rs" },
   { name = "variables6_sol", path = "solutions/01_variables/variables6.rs" },
+  { name = "functions1", path = "exercises/02_functions/functions1.rs" },
+  { name = "functions1_sol", path = "solutions/02_functions/functions1.rs" },
+  { name = "functions2", path = "exercises/02_functions/functions2.rs" },
+  { name = "functions2_sol", path = "solutions/02_functions/functions2.rs" },
+  { name = "functions3", path = "exercises/02_functions/functions3.rs" },
+  { name = "functions3_sol", path = "solutions/02_functions/functions3.rs" },
+  { name = "functions4", path = "exercises/02_functions/functions4.rs" },
+  { name = "functions4_sol", path = "solutions/02_functions/functions4.rs" },
+  { name = "functions5", path = "exercises/02_functions/functions5.rs" },
+  { name = "functions5_sol", path = "solutions/02_functions/functions5.rs" },
 ]
 
 [package]

@@ -125,3 +125,63 @@ erfährst du im Abschnitt 'Constants' im Buch-Kapitel 'Variables and
 Mutability':
 https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#constants
 """
+
+[[exercises]]
+name = "functions1"
+dir = "02_functions"
+test = false
+hint = """
+Diese `main`-Funktion ruft eine Funktion auf, von der sie erwartet, dass es
+sie gibt — die Funktion existiert aber nicht. Sie erwartet, dass diese
+Funktion `call_me` heißt. Außerdem erwartet sie, dass diese Funktion keine
+Argumente entgegennimmt und keinen Wert zurückgibt. Klingt ziemlich nach
+`main`, oder?
+"""
+
+[[exercises]]
+name = "functions2"
+dir = "02_functions"
+test = false
+hint = """
+Rust verlangt, dass alle Teile der Signatur einer Funktion mit
+Typ-Annotationen versehen sind, aber `call_me` fehlt die Typ-Annotation von
+`num`.
+"""
+
+[[exercises]]
+name = "functions3"
+dir = "02_functions"
+test = false
+hint = """
+Diesmal ist die Funktions-*deklaration* in Ordnung, aber an der Stelle, an
+der wir die Funktion aufrufen, stimmt etwas nicht.
+"""
+
+[[exercises]]
+name = "functions4"
+dir = "02_functions"
+test = false
+hint = """
+Die Fehlermeldung bezieht sich auf die Funktion `sale_price` und sagt, dass
+nach `->` ein Typ erwartet wird. Genau dort sollte der Rückgabetyp der
+Funktion stehen. Schau dir die Funktion `is_even` als Beispiel an!
+"""
+
+[[exercises]]
+name = "functions5"
+dir = "02_functions"
+test = false
+hint = """
+Das ist ein wirklich häufiger Fehler, der sich durch das Entfernen eines
+einzigen Zeichens beheben lässt. Er passiert, weil Rust zwischen Ausdrücken
+(Expressions) und Anweisungen (Statements) unterscheidet: Ausdrücke geben
+abhängig von ihren Operanden einen Wert zurück, Anweisungen geben einfach den
+Typ `()` zurück, der sich wie `void` in C/C++ verhält.
+
+Wir wollen aus der Funktion `square` einen Wert vom Typ `i32` zurückgeben,
+aber sie gibt gerade den Typ `()` zurück.
+
+Es gibt zwei Lösungen:
+1. Das Schlüsselwort `return` vor `num * num;` hinzufügen
+2. Das Semikolon `;` nach `num * num` entfernen
+"""
