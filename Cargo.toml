@@ -78,6 +78,12 @@ bin = [
   { name = "strings3_sol", path = "solutions/09_strings/strings3.rs" },
   { name = "strings4", path = "exercises/09_strings/strings4.rs" },
   { name = "strings4_sol", path = "solutions/09_strings/strings4.rs" },
+  { name = "modules1", path = "exercises/10_modules/modules1.rs" },
+  { name = "modules1_sol", path = "solutions/10_modules/modules1.rs" },
+  { name = "modules2", path = "exercises/10_modules/modules2.rs" },
+  { name = "modules2_sol", path = "solutions/10_modules/modules2.rs" },
+  { name = "modules3", path = "exercises/10_modules/modules3.rs" },
+  { name = "modules3_sol", path = "solutions/10_modules/modules3.rs" },
 ]
 
 [package]

@@ -543,3 +543,38 @@ wird zu
 `string_slice("blau");`
 weil "blau" ein `&str` ist, kein `String`.
 """
+
+[[exercises]]
+name = "modules1"
+dir = "10_modules"
+test = false
+hint = """
+In Rust ist standardmäßig alles privat. Aber es gibt ein Schlüsselwort, mit
+dem wir etwas öffentlich machen können!
+"""
+
+[[exercises]]
+name = "modules2"
+dir = "10_modules"
+test = false
+hint = """
+Das Modul `delicious_snacks` versucht, eine äußere Schnittstelle zu zeigen,
+die anders aussieht als seine innere Struktur (die Module `fruits` und
+`veggies` mit ihren zugehörigen Konstanten). Vervollständige die
+`use`-Anweisungen passend zur Verwendung in `main` und finde das eine
+fehlende Schlüsselwort für beide Konstanten.
+
+Mehr dazu in „The Book“:
+https://doc.rust-lang.org/book/ch07-04-bringing-paths-into-scope-with-the-use-keyword.html#re-exporting-names-with-pub-use
+"""
+
+[[exercises]]
+name = "modules3"
+dir = "10_modules"
+test = false
+hint = """
+`UNIX_EPOCH` und `SystemTime` sind im Modul `std::time` deklariert. Füge
+eine `use`-Anweisung für die beiden hinzu, um sie in den Scope zu holen. Du
+kannst verschachtelte Pfade benutzen, um beide mit nur einer Zeile
+hereinzuholen.
+"""
