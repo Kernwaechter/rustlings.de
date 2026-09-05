@@ -221,3 +221,79 @@ hint = """
 In Rust muss jeder Zweig eines `if`-Ausdrucks denselben Werttyp zurückgeben.
 Stell sicher, dass der Typ in allen Zweigen einheitlich ist.
 """
+
+[[exercises]]
+name = "primitive_types1"
+dir = "04_primitive_types"
+test = false
+hint = """
+In Rust kann ein boolescher Wert verneint werden, indem man den Operator `!`
+davor schreibt.
+Beispiel: `!true == false`
+Das funktioniert auch mit booleschen Variablen.
+"""
+
+[[exercises]]
+name = "primitive_types2"
+dir = "04_primitive_types"
+test = false
+hint = """
+Diesmal kein Hinweis ;)
+"""
+
+[[exercises]]
+name = "primitive_types3"
+dir = "04_primitive_types"
+test = false
+hint = """
+Es gibt eine Kurzschreibweise, um Arrays mit einer bestimmten Größe zu
+initialisieren, ohne 100 Elemente einzeln eintippen zu müssen (auch wenn du
+das natürlich gerne tun kannst!).
+
+Zum Beispiel geht das so:
+```
+let array = ["Sind wir schon da?"; 100];
+```
+
+Bonus: Was gibt es sonst noch, das für `a.len() >= 100` `true` ergeben würde?
+"""
+
+[[exercises]]
+name = "primitive_types4"
+dir = "04_primitive_types"
+hint = """
+Wirf einen Blick in den Abschnitt 'Understanding Ownership -> Slices -> Other
+Slices' des Buchs: https://doc.rust-lang.org/book/ch04-03-slices.html und
+nutze den Start- und (End-plus-eins-)Index der Elemente im Array, die im
+Slice landen sollen.
+
+Falls dich interessiert, warum das erste Argument von `assert_eq!` kein `&`
+für eine Referenz hat, obwohl das zweite Argument eine Referenz ist, wirf
+einen Blick ins Coercion-Kapitel des Nomicon:
+https://doc.rust-lang.org/nomicon/coercions.html
+"""
+
+[[exercises]]
+name = "primitive_types5"
+dir = "04_primitive_types"
+test = false
+hint = """
+Wirf einen Blick in den Abschnitt 'Data Types -> The Tuple Type' des Buchs:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Insbesondere den Teil über Destrukturierung (vorletztes Beispiel im
+Abschnitt).
+
+Du musst ein Muster bauen, um `name` und `age` an die passenden Teile des
+Tupels zu binden.
+"""
+
+[[exercises]]
+name = "primitive_types6"
+dir = "04_primitive_types"
+hint = """
+Auch wenn du hier ein destrukturierendes `let` für das Tupel verwenden
+könntest, versuch stattdessen, per Index darauf zuzugreifen — wie im letzten
+Beispiel des Abschnitts 'Data Types -> The Tuple Type' des Buchs erklärt:
+https://doc.rust-lang.org/book/ch03-02-data-types.html#the-tuple-type
+Jetzt hast du ein weiteres Werkzeug in deinem Werkzeugkasten!
+"""

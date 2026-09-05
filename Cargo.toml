@@ -32,6 +32,18 @@ bin = [
   { name = "if2_sol", path = "solutions/03_if/if2.rs" },
   { name = "if3", path = "exercises/03_if/if3.rs" },
   { name = "if3_sol", path = "solutions/03_if/if3.rs" },
+  { name = "primitive_types1", path = "exercises/04_primitive_types/primitive_types1.rs" },
+  { name = "primitive_types1_sol", path = "solutions/04_primitive_types/primitive_types1.rs" },
+  { name = "primitive_types2", path = "exercises/04_primitive_types/primitive_types2.rs" },
+  { name = "primitive_types2_sol", path = "solutions/04_primitive_types/primitive_types2.rs" },
+  { name = "primitive_types3", path = "exercises/04_primitive_types/primitive_types3.rs" },
+  { name = "primitive_types3_sol", path = "solutions/04_primitive_types/primitive_types3.rs" },
+  { name = "primitive_types4", path = "exercises/04_primitive_types/primitive_types4.rs" },
+  { name = "primitive_types4_sol", path = "solutions/04_primitive_types/primitive_types4.rs" },
+  { name = "primitive_types5", path = "exercises/04_primitive_types/primitive_types5.rs" },
+  { name = "primitive_types5_sol", path = "solutions/04_primitive_types/primitive_types5.rs" },
+  { name = "primitive_types6", path = "exercises/04_primitive_types/primitive_types6.rs" },
+  { name = "primitive_types6_sol", path = "solutions/04_primitive_types/primitive_types6.rs" },
 ]
 
 [package]
