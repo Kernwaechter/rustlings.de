@@ -838,3 +838,35 @@ benutze die '+'-Syntax. Versuche, `???` durch
 Verwandter Abschnitt in „The Book“:
 https://doc.rust-lang.org/book/ch10-02-traits.html#specifying-multiple-trait-bounds-with-the--syntax
 """
+
+[[exercises]]
+name = "lifetimes1"
+dir = "16_lifetimes"
+hint = """
+Lass dich vom Compiler leiten. Schau auch in „The Book“, falls du Hilfe
+brauchst:
+https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html
+"""
+
+[[exercises]]
+name = "lifetimes2"
+dir = "16_lifetimes"
+test = false
+hint = """
+Denk daran, dass der generische Lifetime `'a` den konkreten Lifetime
+bekommt, der dem kleineren der Lifetimes von `x` und `y` entspricht.
+
+Es gibt mindestens zwei Wege, das gewünschte Ergebnis zu erreichen und
+dabei den inneren Block zu behalten:
+1. Verschiebe die Deklaration von `string2`, damit sie so lange lebt wie
+   `string1` (wie ist `result` deklariert?)
+2. Verschiebe `println!` in den inneren Block
+"""
+
+[[exercises]]
+name = "lifetimes3"
+dir = "16_lifetimes"
+test = false
+hint = """
+Lass dich vom Compiler leiten :)
+"""

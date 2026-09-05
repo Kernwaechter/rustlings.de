@@ -122,6 +122,12 @@ bin = [
   { name = "traits4_sol", path = "solutions/15_traits/traits4.rs" },
   { name = "traits5", path = "exercises/15_traits/traits5.rs" },
   { name = "traits5_sol", path = "solutions/15_traits/traits5.rs" },
+  { name = "lifetimes1", path = "exercises/16_lifetimes/lifetimes1.rs" },
+  { name = "lifetimes1_sol", path = "solutions/16_lifetimes/lifetimes1.rs" },
+  { name = "lifetimes2", path = "exercises/16_lifetimes/lifetimes2.rs" },
+  { name = "lifetimes2_sol", path = "solutions/16_lifetimes/lifetimes2.rs" },
+  { name = "lifetimes3", path = "exercises/16_lifetimes/lifetimes3.rs" },
+  { name = "lifetimes3_sol", path = "solutions/16_lifetimes/lifetimes3.rs" },
 ]
 
 [package]
