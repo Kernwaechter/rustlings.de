@@ -613,3 +613,46 @@ Hinweis 2: Falls für einen Schlüssel bereits ein Eintrag existiert, kann der
 Mehr dazu in „The Book“:
 https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-the-old-value
 """
+
+[[exercises]]
+name = "options1"
+dir = "12_options"
+hint = """
+Optionen können einen `Some`-Wert mit einem inneren Wert haben oder einen
+`None`-Wert ohne inneren Wert.
+
+Es gibt mehrere Wege, an den inneren Wert zu kommen: Du kannst `unwrap`
+benutzen oder Pattern-Matching. Unwrapping ist am einfachsten, aber wie
+machst du es sicher, sodass es dir nicht später um die Ohren fliegt?
+"""
+
+[[exercises]]
+name = "options2"
+dir = "12_options"
+hint = """
+Schau dir das an:
+
+- https://doc.rust-lang.org/rust-by-example/flow_control/if_let.html
+- https://doc.rust-lang.org/rust-by-example/flow_control/while_let.html
+
+Denk daran, dass `Option`s in if-let- und while-let-Anweisungen verschachtelt
+sein können.
+
+Zum Beispiel: `if let Some(Some(x)) = y`
+
+Schau dir auch `Option::flatten` an.
+"""
+
+[[exercises]]
+name = "options3"
+dir = "12_options"
+test = false
+hint = """
+Der Compiler sagt, dass in der `match`-Anweisung ein Teil-Move (partial
+move) stattgefunden hat. Wie lässt sich das vermeiden? Der Compiler zeigt
+dir die nötige Korrektur.
+
+Lies dir nach der vom Compiler vorgeschlagenen Korrektur die zugehörige
+Doku-Seite durch:
+https://doc.rust-lang.org/std/keyword.ref.html
+"""

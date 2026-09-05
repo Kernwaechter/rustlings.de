@@ -90,6 +90,12 @@ bin = [
   { name = "hashmaps2_sol", path = "solutions/11_hashmaps/hashmaps2.rs" },
   { name = "hashmaps3", path = "exercises/11_hashmaps/hashmaps3.rs" },
   { name = "hashmaps3_sol", path = "solutions/11_hashmaps/hashmaps3.rs" },
+  { name = "options1", path = "exercises/12_options/options1.rs" },
+  { name = "options1_sol", path = "solutions/12_options/options1.rs" },
+  { name = "options2", path = "exercises/12_options/options2.rs" },
+  { name = "options2_sol", path = "solutions/12_options/options2.rs" },
+  { name = "options3", path = "exercises/12_options/options3.rs" },
+  { name = "options3_sol", path = "solutions/12_options/options3.rs" },
 ]
 
 [package]
