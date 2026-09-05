@@ -1004,3 +1004,70 @@ Für eine zusätzliche Herausforderung: Schau in der Dokumentation zu
 `Iterator` nach einer anderen Methode, die deinen Code kompakter machen
 könnte als die Benutzung von `fold`.
 """
+
+[[exercises]]
+name = "smart_pointers1"
+dir = "19_smart_pointers"
+hint = """
+Die Meldung des Compilers sollte helfen: Da wir bei rekursiven Typen den
+Wert des tatsächlichen Typs nicht speichern können, müssen wir eine
+Referenz (einen Zeiger) auf seinen Wert speichern.
+
+Wir sollten unsere `List` also in einen `Box` packen. Mehr Details in „The
+Book“:
+https://doc.rust-lang.org/book/ch15-01-box.html#enabling-recursive-types-with-boxes
+
+Eine leere Liste zu erzeugen sollte recht einfach sein (Hinweis: Lies die
+Tests).
+
+Denk bei einer nicht-leeren Liste daran, dass wir unseren `Cons`-Listenbauer
+benutzen wollen. Obwohl die aktuelle Liste eine aus Ganzzahlen (`i32`) ist,
+kannst du gerne die Definition ändern und andere Typen ausprobieren!
+"""
+
+[[exercises]]
+name = "smart_pointers2"
+dir = "19_smart_pointers"
+hint = """
+Das ist eine unkomplizierte Übung zur Benutzung des Typs `Rc<T>`. Jeder
+`Planet` besitzt die `Sun`, und benutzt `Rc::clone()`, um den
+Referenzzähler der `Sun` zu erhöhen.
+
+Nachdem `drop()` benutzt wurde, um die `Planet`s einzeln aus dem Scope zu
+entfernen, sinkt der Referenzzähler.
+
+Am Ende hat die `Sun` wieder nur eine einzige Referenz, auf sich selbst.
+
+Mehr dazu unter: https://doc.rust-lang.org/book/ch15-04-rc.html
+
+Leider gilt Pluto nicht mehr als Planet :(
+"""
+
+[[exercises]]
+name = "smart_pointers3"
+dir = "19_smart_pointers"
+test = false
+hint = """
+Mach `shared_numbers` zu einem `Arc` des Vektors `numbers`. Um dann keine
+Kopie von `numbers` zu erzeugen, musst du `child_numbers` innerhalb der
+Schleife, aber immer noch im Hauptthread, erzeugen.
+
+`child_numbers` sollte ein Klon des `Arc` der Zahlen sein, statt einer
+Thread-lokalen Kopie der Zahlen.
+
+Das ist eine einfache Übung, wenn du die zugrunde liegenden Konzepte
+verstehst. Falls es dir aber zu schwerfällt, ziehe in Betracht, das
+gesamte Kapitel 16 in „The Book“ zu lesen:
+https://doc.rust-lang.org/book/ch16-00-concurrency.html
+"""
+
+[[exercises]]
+name = "smart_pointers4"
+dir = "19_smart_pointers"
+hint = """
+Wenn `Cow` die Daten bereits besitzt, muss es sie beim Aufruf von
+`to_mut()` nicht klonen.
+
+Schau dir die Dokumentation des Typs `Cow` an:
+https://doc.rust-lang.org/std/borrow/enum.Cow.html
+"""

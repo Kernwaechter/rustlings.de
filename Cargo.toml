@@ -144,6 +144,14 @@ bin = [
   { name = "iterators4_sol", path = "solutions/18_iterators/iterators4.rs" },
   { name = "iterators5", path = "exercises/18_iterators/iterators5.rs" },
   { name = "iterators5_sol", path = "solutions/18_iterators/iterators5.rs" },
+  { name = "smart_pointers1", path = "exercises/19_smart_pointers/smart_pointers1.rs" },
+  { name = "smart_pointers1_sol", path = "solutions/19_smart_pointers/smart_pointers1.rs" },
+  { name = "smart_pointers2", path = "exercises/19_smart_pointers/smart_pointers2.rs" },
+  { name = "smart_pointers2_sol", path = "solutions/19_smart_pointers/smart_pointers2.rs" },
+  { name = "smart_pointers3", path = "exercises/19_smart_pointers/smart_pointers3.rs" },
+  { name = "smart_pointers3_sol", path = "solutions/19_smart_pointers/smart_pointers3.rs" },
+  { name = "smart_pointers4", path = "exercises/19_smart_pointers/smart_pointers4.rs" },
+  { name = "smart_pointers4_sol", path = "solutions/19_smart_pointers/smart_pointers4.rs" },
 ]
 
 [package]
