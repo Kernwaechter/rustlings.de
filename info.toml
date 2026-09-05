@@ -578,3 +578,38 @@ eine `use`-Anweisung für die beiden hinzu, um sie in den Scope zu holen. Du
 kannst verschachtelte Pfade benutzen, um beide mit nur einer Zeile
 hereinzuholen.
 """
+
+[[exercises]]
+name = "hashmaps1"
+dir = "11_hashmaps"
+hint = """
+Die Anzahl der Früchte sollte mindestens 5 sein, und du musst mindestens 3
+verschiedene Fruchtsorten hineinlegen.
+"""
+
+[[exercises]]
+name = "hashmaps2"
+dir = "11_hashmaps"
+hint = """
+Benutze die Methoden `entry()` und `or_insert()` von `HashMap`, um das zu
+erreichen.
+
+Mehr dazu in „The Book“:
+https://doc.rust-lang.org/book/ch08-03-hash-maps.html#only-inserting-a-value-if-the-key-has-no-value
+"""
+
+[[exercises]]
+name = "hashmaps3"
+dir = "11_hashmaps"
+hint = """
+Hinweis 1: Benutze die Methoden `entry()` und `or_default()` von `HashMap`,
+           um den Standardwert von `TeamScores` einzufügen, falls ein Team
+           noch nicht in der Tabelle existiert.
+
+Hinweis 2: Falls für einen Schlüssel bereits ein Eintrag existiert, kann der
+           von `entry()` zurückgegebene Wert basierend auf dem bestehenden
+           Wert aktualisiert werden.
+
+Mehr dazu in „The Book“:
+https://doc.rust-lang.org/book/ch08-03-hash-maps.html#updating-a-value-based-on-the-old-value
+"""
