@@ -1,0 +1,33 @@
+# The format version is an indicator of the compatibility of community exercises with the
+# Rustlings program.
+# The format version is not the same as the version of the Rustlings program.
+# In case Rustlings makes an unavoidable breaking change to the expected format of community
+# exercises, you would need to raise this version and adapt to the new format.
+# Otherwise, the newest version of the Rustlings program won't be able to run these exercises.
+format_version = 1
+
+# Optional multi-line message to be shown to users when just starting with the exercises.
+welcome_message = """Willkommen bei diesen deutschen Community-Übungen für Rustlings."""
+
+# Optional multi-line message to be shown to users after finishing all exercises.
+final_message = """Wir hoffen, dass dir diese Übungen geholfen haben :D"""
+
+# Repeat this section for every exercise.
+[[exercises]]
+name = "intro1"
+dir = "00_intro"
+test = false
+skip_check_unsolved = true
+hint = """
+Gib `n` ein, um zur nächsten Übung zu wechseln.
+Möglicherweise musst du nach der Eingabe von `n` noch ENTER drücken.
+"""
+
+[[exercises]]
+name = "intro2"
+dir = "00_intro"
+test = false
+hint = """
+Der Compiler weist uns darauf hin, dass wir den Namen des Print-Makros falsch
+geschrieben haben. Er schlägt auch eine Alternative vor.
+"""

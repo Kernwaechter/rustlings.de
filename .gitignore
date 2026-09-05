@@ -1,0 +1,8 @@
+Cargo.lock
+target/
+# ".vscode/" (statt ".vscode/*") würde die Negation unten wirkungslos machen — git kann
+# eine Datei nicht wieder einschließen, wenn schon ihr Elternverzeichnis ausgeschlossen
+# ist. Genau dieser Fehler steckt im von `rustlings dev new` generierten Original.
+.vscode/*
+!.vscode/extensions.json
+.rustlings-state.txt
