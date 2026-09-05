@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler.
+// TODO: Korrigiere den Compiler-Fehler.
 fn main() {
     let x = 3;
     println!("Zahl {x}");

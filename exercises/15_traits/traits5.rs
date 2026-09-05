@@ -18,7 +18,7 @@ struct OtherStruct;
 impl SomeTrait for OtherStruct {}
 impl OtherTrait for OtherStruct {}
 
-// TODO: Behebe den Compiler-Fehler, indem du nur die Signatur dieser
+// TODO: Korrigiere den Compiler-Fehler, indem du nur die Signatur dieser
 // Funktion änderst.
 fn some_func(item: ???) -> bool {
     item.some_function() && item.other_function()

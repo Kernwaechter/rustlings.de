@@ -4,7 +4,7 @@ fn main() {
 
 #[cfg(test)]
 mod tests {
-    // TODO: Behebe die Compiler-Fehler nur, indem du die Zeilen im Test neu anordnest.
+    // TODO: Korrigiere die Compiler-Fehler nur, indem du die Zeilen im Test neu anordnest.
     // Füge keine Zeile hinzu, ändere oder entferne keine.
     #[test]
     fn move_semantics4() {

@@ -10,7 +10,7 @@ struct OtherSoftware;
 impl Licensed for SomeSoftware {}
 impl Licensed for OtherSoftware {}
 
-// TODO: Behebe den Compiler-Fehler, indem du nur die Signatur dieser
+// TODO: Korrigiere den Compiler-Fehler, indem du nur die Signatur dieser
 // Funktion änderst.
 fn compare_license_types(software1: ???, software2: ???) -> bool {
     software1.licensing_info() == software2.licensing_info()

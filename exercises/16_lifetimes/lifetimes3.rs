@@ -1,6 +1,6 @@
 // Lifetimes werden auch gebraucht, wenn Strukturen Referenzen enthalten.
 
-// TODO: Behebe die Compiler-Fehler bei dieser Struktur.
+// TODO: Korrigiere die Compiler-Fehler bei dieser Struktur.
 struct Book {
     author: &str,
     title: &str,

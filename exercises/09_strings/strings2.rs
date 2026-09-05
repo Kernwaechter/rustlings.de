@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler in der `main`-Funktion, ohne diese Funktion zu ändern.
+// TODO: Korrigiere den Compiler-Fehler in der `main`-Funktion, ohne diese Funktion zu ändern.
 fn is_a_color_word(attempt: &str) -> bool {
     attempt == "grün" || attempt == "blau" || attempt == "rot"
 }

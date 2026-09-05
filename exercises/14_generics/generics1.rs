@@ -4,7 +4,7 @@
 // der Compiler etwas Hilfe durch eine Typ-Annotation.
 
 fn main() {
-    // TODO: Behebe den Compiler-Fehler, indem du den Typ des Vektors
+    // TODO: Korrigiere den Compiler-Fehler, indem du den Typ des Vektors
     // `Vec<T>` annotierst. Wähle für `T` einen Ganzzahltyp, der sich sowohl
     // aus `u8` als auch aus `i8` erzeugen lässt.
     let mut numbers = Vec::new();

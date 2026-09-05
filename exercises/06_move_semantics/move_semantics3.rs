@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler in der Funktion, ohne eine neue Zeile hinzuzufügen.
+// TODO: Korrigiere den Compiler-Fehler in der Funktion, ohne eine neue Zeile hinzuzufügen.
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
     vec.push(88);
 

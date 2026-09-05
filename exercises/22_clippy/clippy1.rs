@@ -7,7 +7,7 @@
 // um die Übung zu lösen.
 
 fn main() {
-    // TODO: Behebe den Clippy-Lint in dieser Zeile.
+    // TODO: Korrigiere den Clippy-Lint in dieser Zeile.
     let pi = 3.14;
     let radius: f32 = 5.0;
 

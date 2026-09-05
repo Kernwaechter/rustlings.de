@@ -5,7 +5,7 @@
 // und besitzen ihre Daten nicht selbst. Was, wenn ihr Besitzer den Scope
 // verlässt?
 
-// TODO: Behebe den Compiler-Fehler, indem du die Funktionssignatur
+// TODO: Korrigiere den Compiler-Fehler, indem du die Funktionssignatur
 // aktualisierst.
 fn longest(x: &str, y: &str) -> &str {
     if x.len() > y.len() {

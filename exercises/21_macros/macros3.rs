@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler, ohne die Makrodefinition aus diesem
+// TODO: Korrigiere den Compiler-Fehler, ohne die Makrodefinition aus diesem
 // Modul herauszunehmen.
 mod macros {
     macro_rules! my_macro {

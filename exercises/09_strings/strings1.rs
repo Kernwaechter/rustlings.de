@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler, ohne die Funktionssignatur zu ändern.
+// TODO: Korrigiere den Compiler-Fehler, ohne die Funktionssignatur zu ändern.
 fn current_favorite_color() -> String {
     "blau"
 }

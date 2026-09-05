@@ -1,4 +1,4 @@
-// TODO: Behebe den Funktionskörper, ohne die Signatur zu ändern.
+// TODO: Korrigiere den Funktionskörper, ohne die Signatur zu ändern.
 fn square(num: i32) -> i32 {
     num * num;
 }

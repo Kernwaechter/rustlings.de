@@ -5,6 +5,6 @@ fn call_me(num: u8) {
 }
 
 fn main() {
-    // TODO: Behebe den Funktionsaufruf.
+    // TODO: Korrigiere den Funktionsaufruf.
     call_me();
 }

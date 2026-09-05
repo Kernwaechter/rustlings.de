@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler, indem du ein oder zwei Zeichen
+// TODO: Korrigiere den Compiler-Fehler, indem du ein oder zwei Zeichen
 // hinzufügst.
 #[rustfmt::skip]
 macro_rules! my_macro {

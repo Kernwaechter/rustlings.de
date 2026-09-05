@@ -8,7 +8,7 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
 }
 
 fn main() {
-    // TODO: Behebe den Compiler-Fehler, indem du eine Zeile verschiebst.
+    // TODO: Korrigiere den Compiler-Fehler, indem du eine Zeile verschiebst.
 
     let string1 = String::from("langer String ist lang");
     let result;

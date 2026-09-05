@@ -5,6 +5,6 @@ macro_rules! my_macro {
 }
 
 fn main() {
-    // TODO: Behebe den Makroaufruf.
+    // TODO: Korrigiere den Makroaufruf.
     my_macro();
 }

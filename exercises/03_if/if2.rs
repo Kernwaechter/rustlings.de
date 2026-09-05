@@ -1,4 +1,4 @@
-// TODO: Behebe den Compiler-Fehler in dieser Funktion.
+// TODO: Korrigiere den Compiler-Fehler in dieser Funktion.
 fn picky_eater(food: &str) -> &str {
     if food == "Erdbeere" {
         "Lecker!"
@@ -12,7 +12,7 @@ fn main() {
 }
 
 // TODO: Lies die Tests, um das gewünschte Verhalten zu verstehen.
-// Bring alle Tests zum Bestehen, ohne sie zu verändern.
+// Sorge dafür, dass alle Tests erfolgreich sind, ohne diese zu ändern.
 #[cfg(test)]
 mod tests {
     use super::*;

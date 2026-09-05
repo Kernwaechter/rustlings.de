@@ -1,4 +1,4 @@
 fn main() {
-    // TODO: Behebe den Code, damit er "Hello world!" ausgibt.
+    // TODO: Korrigiere den Code, damit er "Hello world!" ausgibt.
     printline!("Hello world!");
 }

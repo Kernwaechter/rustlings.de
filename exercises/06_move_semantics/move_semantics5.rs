@@ -1,6 +1,6 @@
 #![allow(clippy::ptr_arg)]
 
-// TODO: Behebe die Compiler-Fehler, ohne etwas anderes zu ändern außer dem
+// TODO: Korrigiere die Compiler-Fehler, ohne etwas anderes zu ändern außer dem
 // Hinzufügen oder Entfernen von Referenzen (dem Zeichen `&`).
 
 // Sollte keinen Besitz übernehmen

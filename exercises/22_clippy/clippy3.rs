@@ -1,6 +1,6 @@
 // Hier sind noch ein paar einfache Clippy-Fixes, damit du seinen Nutzen
 // siehst.
-// TODO: Behebe alle Clippy-Lints.
+// TODO: Korrigiere alle Clippy-Lints.
 
 #[allow(unused_variables, unused_assignments)]
 fn main() {

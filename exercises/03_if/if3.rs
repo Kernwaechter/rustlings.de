@@ -1,5 +1,5 @@
 fn animal_habitat(animal: &str) -> &str {
-    // TODO: Behebe den Compiler-Fehler in der Anweisung unten.
+    // TODO: Korrigiere den Compiler-Fehler in der Anweisung unten.
     let identifier = if animal == "Krabbe" {
         1
     } else if animal == "Erdhörnchen" {

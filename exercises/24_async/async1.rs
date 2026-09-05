@@ -25,7 +25,7 @@ async fn main() {
     assert_eq!(mean_score_c, 76); // catherine
 }
 
-// TODO: Behebe die Compiler-Fehler, indem du die gestartete Funktion async
+// TODO: Korrigiere die Compiler-Fehler, indem du die gestartete Funktion async
 // machst.
 fn calculate_mean_score(scores_file: &str) -> usize {
     // Lies die Datei asynchron ein
