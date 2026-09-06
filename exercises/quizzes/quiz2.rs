@@ -6,16 +6,16 @@
 // - Enums
 //
 // Lass uns eine kleine Maschine in Form einer Funktion bauen. Als Eingabe
-// geben wir eine Liste von Strings und Befehlen. Diese Befehle bestimmen,
-// welche Aktion auf den String angewendet wird. Es kann entweder sein:
+// geben wir eine Liste von Strings und Befehlen. Diese Befehle legen fest,
+// welche Aktion mit dem String passiert. Das kann eines von diesen sein:
 // - Den String in Großbuchstaben umwandeln
 // - Den String trimmen
 // - "bar" eine festgelegte Anzahl von Malen an den String anhängen
 //
-// Die genaue Form davon wird sein:
-// - Die Eingabe ist ein Vektor aus 2-elementigen Tupeln, wobei das erste
-//   Element der String ist und das zweite der Befehl.
-// - Das Ausgabeelement ist ein Vektor von Strings.
+// Genauer gesagt:
+// - Die Eingabe ist ein Vektor aus Tupeln mit je zwei Elementen. Das erste
+//   Element ist der String, das zweite der Befehl.
+// - Die Ausgabe ist ein Vektor von Strings.
 
 enum Command {
     Uppercase,

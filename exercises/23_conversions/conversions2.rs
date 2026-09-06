@@ -1,11 +1,12 @@
-// Der Trait `From` wird für Wert-zu-Wert-Umwandlungen benutzt. Wenn `From`
-// implementiert ist, wird automatisch auch eine Implementierung von `Into`
-// bereitgestellt. Mehr dazu kannst du in der Dokumentation lesen:
+// Der Trait `From` wird für Wert-zu-Wert-Umwandlungen benutzt.
+// Implementierst du `From`, bekommst du automatisch auch eine
+// Implementierung von `Into` dazu. Mehr dazu kannst du in der
+// Dokumentation lesen:
 // https://doc.rust-lang.org/std/convert/trait.From.html
 //
-// Maßeinheiten mit eigenen Typen darzustellen, ist gängige Praxis. Es
-// verhindert, dass Werte unterschiedlicher Maßeinheiten versehentlich
-// vermischt werden.
+// Es ist gängige Praxis, für verschiedene Maßeinheiten eigene Typen zu
+// benutzen. Das verhindert, dass du aus Versehen Werte unterschiedlicher
+// Maßeinheiten miteinander vermischst.
 
 struct Celsius(f64);
 

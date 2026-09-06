@@ -1,9 +1,11 @@
-// Der Rust-Compiler muss wissen, wie er prüfen kann, ob übergebene
-// Referenzen gültig sind, damit er dem Programmierer mitteilen kann, wenn
-// eine Referenz Gefahr läuft, aus dem Gültigkeitsbereich (Scope) zu fallen,
-// bevor sie benutzt wird. Denk daran: Referenzen sind Ausleihen (Borrows)
-// und besitzen ihre Daten nicht selbst. Was, wenn ihr Besitzer den Scope
-// verlässt?
+// Der Rust-Compiler muss prüfen können, ob eine Referenz gültig ist. Nur so
+// kann er dich warnen, wenn eine Referenz zu früh ungültig wird (aus ihrem
+// Gültigkeitsbereich fällt, dem Scope).
+//
+// Denk daran: Eine Referenz ist nur eine Ausleihe (Borrow). Sie besitzt
+// ihre Daten nicht selbst, sondern leiht sie sich nur. Was passiert also,
+// wenn der eigentliche Besitzer der Daten seinen Scope verlässt, bevor die
+// Referenz benutzt wird?
 
 // TODO: Korrigiere den Compiler-Fehler, indem du die Funktionssignatur
 // aktualisierst.

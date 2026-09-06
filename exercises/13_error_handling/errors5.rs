@@ -1,16 +1,17 @@
-// Diese Übung ist eine abgewandelte Version der Übung `errors4`. Sie
-// verwendet ein paar Konzepte, die wir erst später im Kurs behandeln, wie
-// `Box` und den `From`-Trait. Es ist jetzt nicht wichtig, sie im Detail zu
-// verstehen, aber du kannst gerne vorauslesen. Stell dir den Typ
-// `Box<dyn ???>` fürs Erste einfach als „ich will irgendetwas, das ??? kann“
-// vor.
+// Diese Übung ist eine abgewandelte Version von `errors4`. Sie nutzt ein
+// paar Konzepte, die erst später im Kurs drankommen: `Box` und den
+// `From`-Trait. Du musst sie jetzt noch nicht im Detail verstehen. Wenn du
+// magst, kannst du aber schon vorauslesen. Stell dir den Typ `Box<dyn ???>`
+// fürs Erste einfach so vor: „Ich will irgendetwas, das ??? kann.“
 //
-// Kurz gesagt: Dieser Anwendungsfall für Boxen ist dafür da, wenn du einen
-// Wert besitzen möchtest und dir nur wichtig ist, dass es sich um einen Typ
-// handelt, der einen bestimmten Trait implementiert. Dazu wird die `Box` als
-// Typ `Box<dyn Trait>` festgelegt (deklariert), wobei `Trait` der Trait ist, nach dem der
-// Compiler bei jedem in diesem Kontext verwendeten Wert sucht. In dieser
-// Übung sind das die möglichen Fehler, die ein `Result` zurückgeben kann.
+// Kurz gesagt: Manchmal willst du einen Wert besitzen, und es ist dir egal,
+// um welchen genauen Typ es sich handelt. Wichtig ist dir nur eins: Der Typ
+// muss einen bestimmten Trait implementieren. Genau dafür ist eine `Box` da.
+//
+// Dafür legst du den Typ der `Box` so fest (deklarierst ihn): `Box<dyn
+// Trait>`. `Trait` ist dabei der Trait, den der Compiler bei jedem
+// passenden Wert erwartet. In dieser Übung sind das die möglichen Fehler,
+// die ein `Result` zurückgeben kann.
 
 use std::error::Error;
 use std::fmt;

@@ -1,8 +1,8 @@
 // `TryFrom` ist eine einfache und sichere Typumwandlung, die unter
 // bestimmten Umständen auf kontrollierte Weise fehlschlagen kann. Im
-// Grunde ist das dasselbe wie `From`. Der Hauptunterschied ist, dass hier
-// ein `Result`-Typ statt des Zieltyps selbst zurückgegeben werden soll.
-// Mehr dazu kannst du in der Dokumentation lesen:
+// Grunde ist das dasselbe wie `From`. Der Hauptunterschied: Die Funktion
+// gibt hier einen `Result`-Typ zurück, nicht den Zieltyp selbst. Mehr
+// dazu kannst du in der Dokumentation lesen:
 // https://doc.rust-lang.org/std/convert/trait.TryFrom.html
 
 #![allow(clippy::useless_vec)]

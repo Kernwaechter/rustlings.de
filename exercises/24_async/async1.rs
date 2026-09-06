@@ -1,12 +1,11 @@
-// Alice ist eine Grundschullehrerin, die den Notendurchschnitt der
-// Klassenarbeit für drei Klassen berechnen muss, die sie unterrichtet.
-// Statt sie nacheinander zu berechnen, bittet sie ihre Freunde Bob und
-// Catherine um Hilfe. Wenn sie zusammenarbeiten, werden sie viel schneller
-// fertig.
+// Alice ist Grundschullehrerin und unterrichtet drei Klassen. Für jede
+// Klasse muss sie den Notendurchschnitt der Klassenarbeit berechnen. Statt
+// das nacheinander zu tun, bittet sie ihre Freunde Bob und Catherine um
+// Hilfe. Arbeiten sie zusammen, sind sie viel schneller fertig.
 //
-// Lass uns das mit asynchroner Programmierung simulieren. Jede Person wird
-// als asynchrone Aufgabe (Task) dargestellt, die nebenläufig ausgeführt
-// werden kann.
+// Lass uns das mit asynchroner Programmierung nachbauen (simulieren). Wir
+// stellen jede Person als asynchrone Aufgabe dar (Task). Diese Aufgaben
+// können nebenläufig laufen — also gleichzeitig, statt nacheinander.
 
 // Asynchrone Tasks müssen von einer „Runtime“ ausgeführt werden, die nicht
 // von Rusts Standardbibliothek bereitgestellt wird. Hier benutzen wir die

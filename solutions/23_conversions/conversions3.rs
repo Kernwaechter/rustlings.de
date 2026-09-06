@@ -1,10 +1,13 @@
-// In dieser Übung implementieren wir `FromStr`, um Daten, die als String
-// gespeichert sind, in einen strukturierten Typ umzuwandeln. Anders als
-// beim Trait `From` kann die von `FromStr` ausgedrückte Umwandlung
-// fehlschlagen, daher gibt sie ein `Result` zurück. Außerdem kannst du
-// nach der Implementierung von `FromStr` die Methode `parse` auf Strings
-// benutzen, um ein Objekt des implementierenden Typs zu erzeugen. Mehr
-// dazu kannst du in der Dokumentation lesen:
+// In dieser Übung implementieren wir `FromStr`. Damit wandeln wir Daten,
+// die als String gespeichert sind, in einen strukturierten Typ um. Der
+// Trait `From` kann bei seiner Umwandlung nicht fehlschlagen — `FromStr`
+// aber schon. Deshalb gibt `FromStr` ein `Result` zurück statt nur des
+// fertigen Werts.
+//
+// Nach der Implementierung von `FromStr` kannst du außerdem auf Strings
+// die Methode `parse` benutzen. Die erzeugt dann automatisch ein Objekt
+// von dem Typ, für den du `FromStr` implementiert hast. Mehr dazu kannst
+// du in der Dokumentation lesen:
 // https://doc.rust-lang.org/std/str/trait.FromStr.html
 
 use std::num::ParseIntError;

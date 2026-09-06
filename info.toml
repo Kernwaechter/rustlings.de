@@ -349,12 +349,12 @@ name = "move_semantics2"
 dir = "06_move_semantics"
 hint = """
 Wenn du diese Übung zum ersten Mal ausführst, siehst du einen Fehler über
-„borrow of moved value“. In Rust kannst du, wenn ein Argument an eine
-Funktion übergeben wird und nicht explizit zurückgegeben wird, die
-ursprüngliche Variable nicht mehr benutzen. Das nennen wir das „Verschieben“
-(Moving) einer Variable. Wenn wir `vec0` an `fill_vec` übergeben, wird es
-nach `vec1` „verschoben“ — das heißt, wir können auf `vec0` nicht mehr
-zugreifen.
+„borrow of moved value“. Übergibst du in Rust ein Argument an eine
+Funktion und gibst es nicht explizit wieder zurück, kannst du die
+ursprüngliche Variable danach nicht mehr benutzen. Das nennen wir das
+„Verschieben“ (Moving) einer Variable. Übergeben wir `vec0` an
+`fill_vec`, wandert es zu `vec1` — das heißt, wir können auf `vec0`
+danach nicht mehr zugreifen.
 
 Du könntest stattdessen eine weitere, eigenständige Kopie der Daten aus
 `vec0` erzeugen und diese an `fill_vec` übergeben. Das nennt man in Rust
@@ -393,13 +393,12 @@ Um die Antwort zu finden, kannst du den Buch-Abschnitt „References and
 Borrowing“ zurate ziehen:
 https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html
 
-Das erste Problem ist, dass `get_char` den Besitz des Strings übernimmt.
-Dadurch wird `data` verschoben und kann für `string_uppercase` nicht mehr
-benutzt werden. `data` wird zuerst nach `get_char` verschoben, was bedeutet,
-dass `string_uppercase` die Daten nicht mehr bearbeiten kann.
+Das erste Problem: `get_char` übernimmt den Besitz des Strings. Dadurch
+wandert `data` zuerst zu `get_char` — und `string_uppercase` kann die
+Daten danach nicht mehr bearbeiten.
 
-Sobald du das behoben hast, muss auch die Funktionssignatur von
-`string_uppercase` angepasst werden.
+Sobald du das behoben hast, musst du auch die Funktionssignatur von
+`string_uppercase` anpassen.
 """
 
 [[exercises]]
@@ -488,14 +487,14 @@ test = false
 hint = """
 Die Funktion `current_favorite_color` gibt aktuell einen String-Slice mit
 der Lifetime `'static` zurück. Wir wissen das, weil die Daten des Strings
-direkt in unserem Code selbst leben — sie kommen nicht aus einer Datei, von
-Nutzereingaben oder einem anderen Programm — deshalb leben sie so lange wie
-unser Programm.
+direkt in unserem Code stehen. Sie kommen nicht aus einer Datei, von
+Nutzereingaben oder einem anderen Programm. Deshalb leben sie so lange wie
+unser Programm selbst.
 
-Es ist aber trotzdem ein String-Slice. Es gibt einen Weg, daraus einen
-`String` zu erzeugen, indem man einen String-Slice umwandelt (behandelt im
-Strings-Kapitel des Buchs), und einen weiteren Weg, der den `From`-Trait
-nutzt.
+Es ist aber trotzdem nur ein String-Slice. Es gibt zwei Wege, daraus
+einen `String` zu machen: Du kannst einen String-Slice direkt umwandeln
+(das steht im Strings-Kapitel des Buchs). Oder du nutzt den
+`From`-Trait.
 """
 
 [[exercises]]
@@ -503,10 +502,11 @@ name = "strings2"
 dir = "09_strings"
 test = false
 hint = """
-Ja, es wäre wirklich einfach, das zu beheben, indem man den an `word`
-gebundenen Wert einfach zu einem String-Slice statt einem `String` macht,
-oder? Es gibt aber einen Weg, ein einziges Zeichen zur `if`-Anweisung
-hinzuzufügen, das den `String` in einen String-Slice umwandelt (coerced).
+Ja, es wäre wirklich einfach, das zu beheben: Mach den Wert, der an
+`word` gebunden ist, einfach zu einem String-Slice statt einem `String`,
+oder? Es gibt aber auch einen anderen Weg: Füge ein einziges Zeichen zur
+`if`-Anweisung hinzu, das den `String` in einen String-Slice umwandelt
+(coerced).
 
 Randnotiz: Wenn dich interessiert, wie diese Art von Referenz-Umwandlung
 funktioniert, kannst du im Buch vorausspringen und diesen Teil im
@@ -683,8 +683,8 @@ Ein Weg, das zu behandeln, ist eine `match`-Anweisung auf
 `item_quantity.parse::<i32>()`, deren Fälle `Ok(irgendwas)` und
 `Err(irgendwas)` sind.
 
-Dieses Muster ist in Rust aber so verbreitet, dass es dafür den
-`?`-Operator gibt, der genau das für dich erledigt, was diese
+Dieses Muster ist in Rust aber so verbreitet, dass es dafür extra den
+`?`-Operator gibt. Er erledigt für dich genau das, was diese
 match-Anweisung tun würde!
 
 Schau dir diesen Abschnitt des Kapitels „Error Handling“ an:
@@ -720,9 +720,9 @@ name = "errors5"
 dir = "13_error_handling"
 test = false
 hint = """
-Innerhalb der `main`-Funktion werden zwei verschiedene mögliche
-`Result`-Typen erzeugt, die mit dem `?`-Operator weitergereicht werden.
-Wie legen wir einen Rückgabetyp für die `main`-Funktion fest (deklarieren
+Innerhalb der `main`-Funktion entstehen zwei verschiedene mögliche
+`Result`-Typen. Wir reichen sie beide mit dem `?`-Operator weiter. Wie
+legen wir einen Rückgabetyp für die `main`-Funktion fest (deklarieren
 ihn), der beide zulässt?
 
 Unter der Haube ruft der `?`-Operator `From::from` auf dem Fehlerwert auf,
@@ -749,11 +749,11 @@ hint = """
 Diese Übung benutzt eine fertige Version von `PositiveNonzeroInteger` aus
 den vorherigen Übungen.
 
-Unterhalb der Zeile, die laut TODO geändert werden soll, gibt es ein
-Beispiel für die Benutzung der Methode `map_err()` auf einem `Result`, um
-einen Fehlertyp in einen anderen umzuwandeln. Versuche etwas Ähnliches auf
-dem `Result` von `parse()`. Danach kannst du den `?`-Operator benutzen, um
-frühzeitig zurückzukehren.
+Direkt unter der Zeile, die du laut TODO ändern sollst, findest du ein
+Beispiel. Es zeigt, wie man mit der Methode `map_err()` auf einem
+`Result` einen Fehlertyp in einen anderen umwandelt. Versuche etwas
+Ähnliches auf dem `Result` von `parse()`. Danach kannst du den
+`?`-Operator benutzen, um frühzeitig zurückzukehren.
 
 Mehr über `map_err()` in der Dokumentation von `std::result`:
 https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err
@@ -929,8 +929,8 @@ dir = "18_iterators"
 hint = """
 `capitalize_first`:
 
-Die Variable `first` ist ein `char`. Sie muss groß geschrieben und den
-restlichen Zeichen in `chars` hinzugefügt werden, um den richtigen `String`
+Die Variable `first` ist ein `char`. Du musst sie groß schreiben und dann
+den restlichen Zeichen in `chars` hinzufügen, um den richtigen `String`
 zurückzugeben.
 
 Die restlichen Zeichen in `chars` lassen sich mit der Methode `as_str` als
@@ -939,8 +939,8 @@ String-Slice betrachten.
 Die Dokumentation zu `char` enthält viele nützliche Methoden.
 https://doc.rust-lang.org/std/primitive.char.html
 
-Benutze `char::to_uppercase`. Es gibt einen Iterator zurück, der in einen
-`String` umgewandelt werden kann.
+Benutze `char::to_uppercase`. Es gibt einen Iterator zurück, der sich in
+einen `String` umwandeln lässt.
 
 `capitalize_words_vector`:
 
@@ -961,8 +961,8 @@ hint = """
 Die Funktion `divide` muss den richtigen Fehler zurückgeben, wenn der
 Divisor 0 ist oder wenn eine glatte Division nicht möglich ist.
 
-Die Variable `division_results` muss in einen Sammlungstyp (Collection)
-eingesammelt (collect) werden.
+Du musst `division_results` in einen Sammlungstyp (Collection) einsammeln
+(collect).
 
 Die Funktion `result_with_list` muss ein einzelnes `Result` zurückgeben,
 bei dem der Erfolgsfall ein Vektor von Ganzzahlen ist und der Fehlerfall
@@ -1036,8 +1036,8 @@ Das ist eine unkomplizierte Übung zur Benutzung des Typs `Rc<T>`. Jeder
 `Planet` besitzt die `Sun`, und benutzt `Rc::clone()`, um den
 Referenzzähler der `Sun` zu erhöhen.
 
-Nachdem `drop()` benutzt wurde, um die `Planet`s einzeln aus dem Scope zu
-entfernen, sinkt der Referenzzähler.
+Wenn wir mit `drop()` die `Planet`s einzeln aus dem Scope entfernen,
+sinkt der Referenzzähler.
 
 Am Ende hat die `Sun` wieder nur eine einzige Referenz, auf sich selbst.
 
@@ -1080,8 +1080,8 @@ name = "threads1"
 dir = "20_threads"
 test = false
 hint = """
-`JoinHandle` ist eine Struktur, die von einem erzeugten (spawned) Thread
-zurückgegeben wird:
+`JoinHandle` ist eine Struktur. Du bekommst sie zurück, wenn du einen
+Thread erzeugst (spawn):
 https://doc.rust-lang.org/std/thread/fn.spawn.html
 
 Eine Herausforderung bei Multi-Thread-Anwendungen ist, dass der
@@ -1249,9 +1249,9 @@ Das lässt sich aus der ersten Formel herleiten:
 name = "conversions3"
 dir = "23_conversions"
 hint = """
-Die Implementierung von `FromStr` soll ein `Ok` mit einem `Person`-Objekt
-zurückgeben, oder ein `Err` mit einem Fehler, falls der String ungültig
-ist.
+Deine Implementierung von `FromStr` soll ein `Ok` mit einem
+`Person`-Objekt zurückgeben. Ist der String ungültig, soll sie
+stattdessen ein `Err` mit einem Fehler zurückgeben.
 
 Noch ein Hinweis: Du kannst die Methode `map_err` von `Result` mit einer
 Funktion oder einer Closure benutzen, um den Fehler von `parse::<u8>` zu

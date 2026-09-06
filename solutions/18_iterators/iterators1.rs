@@ -1,7 +1,7 @@
-// Beim Ausführen von Operationen auf Elementen innerhalb einer Sammlung
-// (Collection) sind Iteratoren unverzichtbar. Dieses Modul hilft dir, dich
-// mit dem Aufbau der Benutzung eines Iterators vertraut zu machen und
-// damit, wie man Elemente innerhalb einer iterierbaren Sammlung durchläuft.
+// Willst du mit Elementen in einer Sammlung (Collection) arbeiten, kommst
+// du an Iteratoren nicht vorbei. Diese Übung zeigt dir den grundlegenden
+// Aufbau eines Iterators und wie du damit Element für Element durch eine
+// Sammlung gehst.
 
 fn main() {
     // Hier kannst du optional experimentieren.

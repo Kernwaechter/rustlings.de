@@ -1,9 +1,11 @@
 // Diese Übung erkundet den intelligenten Zeiger (Smart Pointer) `Cow`
-// (Clone-On-Write). Er kann ausgeliehene (borrowed) Daten umschließen und
-// unveränderlichen Zugriff darauf gewähren und die Daten träge (lazily)
-// klonen, wenn Veränderung oder Besitz (Ownership) benötigt wird. Der Typ
-// ist so gestaltet, dass er über den Trait `Borrow` mit allgemeinen
-// ausgeliehenen Daten funktioniert.
+// (Clone-On-Write). Er umschließt ausgeliehene (geborgte) Daten und gewährt
+// dir unveränderlichen Zugriff darauf. Erst wenn du die Daten verändern
+// willst oder besitzen musst (Ownership), klont `Cow` sie — und das auch
+// erst in genau diesem Moment (träge, lazily).
+//
+// `Cow` ist außerdem so gebaut, dass er über den Trait `Borrow` mit ganz
+// verschiedenen Arten von ausgeliehenen Daten funktioniert.
 
 use std::borrow::Cow;
 

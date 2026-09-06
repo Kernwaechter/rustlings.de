@@ -1,8 +1,10 @@
-// Fang-alles-Fehlertypen wie `Box<dyn Error>` zu benutzen, wird für
-// Bibliothekscode nicht empfohlen, bei dem Aufrufer eventuell anhand des
-// Fehlerinhalts Entscheidungen treffen wollen, statt ihn nur auszugeben oder
-// weiterzureichen. Hier definieren wir einen eigenen Fehlertyp, damit
-// Aufrufer entscheiden können, was als Nächstes zu tun ist, wenn unsere
+// Bei Bibliothekscode ist ein Fang-alles-Fehlertyp wie `Box<dyn Error>`
+// meistens keine gute Idee. Der Grund: Wer die Bibliothek benutzt (der
+// Aufrufer), will anhand des Fehlers vielleicht selbst entscheiden, was zu
+// tun ist — statt den Fehler nur auszugeben oder einfach weiterzureichen.
+//
+// Deshalb definieren wir hier einen eigenen Fehlertyp. Damit kann der
+// Aufrufer selbst entscheiden, was als Nächstes zu tun ist, wenn unsere
 // Funktion einen Fehler zurückgibt.
 
 use std::num::ParseIntError;

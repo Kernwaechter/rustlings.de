@@ -1,7 +1,7 @@
 // In dieser Übung wollen wir das Konzept mehrerer Besitzer über den Typ
 // `Rc<T>` ausdrücken. Das hier ist ein Modell unseres Sonnensystems – es
-// gibt einen Typ `Sun` und mehrere `Planet`s. Die Planeten übernehmen
-// (Ownership) die Sonne, was ausdrückt, dass sie um die Sonne kreisen.
+// gibt einen Typ `Sun` und mehrere `Planet`s. Die Planeten übernehmen die
+// Sonne (Ownership). Das zeigt: Sie kreisen um die Sonne.
 
 #![allow(dead_code)] // Die Rc<Sun>-Felder werden nur per `Debug` ausgegeben, nie einzeln gelesen.
 

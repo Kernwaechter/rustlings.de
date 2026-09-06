@@ -1,10 +1,10 @@
-// TODO: Diese Funktion verweigert die Erzeugung von Text für ein Namensschild,
+// TODO: Diese Funktion weigert sich, Text für ein Namensschild zu erzeugen,
 // wenn du ihr einen leeren String übergibst. Es wäre schöner, wenn sie
 // erklären würde, was das Problem war, statt einfach `None` zurückzugeben.
 // Zum Glück hat Rust eine ähnliche Konstruktion wie `Option`, mit der sich
 // Fehlerbedingungen ausdrücken lassen. Ändere die Funktionssignatur und den
-// Funktionsrumpf so, dass `Result<String, String>` statt `Option<String>`
-// zurückgegeben wird.
+// Funktionsrumpf so, dass die Funktion `Result<String, String>` zurückgibt
+// statt `Option<String>`.
 fn generate_nametag_text(name: String) -> Option<String> {
     if name.is_empty() {
         // Leere Namen sind nicht erlaubt

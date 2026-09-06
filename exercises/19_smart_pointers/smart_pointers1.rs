@@ -1,15 +1,16 @@
-// Zur Kompilierzeit muss Rust wissen, wie viel Platz ein Typ einnimmt. Das
-// wird bei rekursiven Typen zum Problem, bei denen ein Wert als Teil von
-// sich selbst einen weiteren Wert desselben Typs enthalten kann. Um dieses
-// Problem zu umgehen, können wir einen `Box` benutzen – einen intelligenten
-// Zeiger (Smart Pointer), der Daten auf dem Heap speichert und uns damit
-// auch erlaubt, einen rekursiven Typ zu umschließen.
+// Rust muss zur Kompilierzeit wissen, wie viel Speicherplatz ein Typ
+// braucht. Bei rekursiven Typen wird das zum Problem: Ein rekursiver Typ
+// enthält als Teil von sich selbst noch einen weiteren Wert vom gleichen
+// Typ. Dadurch weiß Rust nicht, wie groß der Typ am Ende wirklich ist.
 //
-// Der rekursive Typ, den wir in dieser Übung implementieren, ist die
-// "Cons-Liste", eine Datenstruktur, die häufig in funktionalen
-// Programmiersprachen vorkommt. Jedes Element einer Cons-Liste enthält zwei
-// Teile: den Wert des aktuellen Elements und das nächste Element. Das
-// letzte Element ist ein Wert namens `Nil`.
+// Die Lösung ist eine `Box`. Das ist ein intelligenter Zeiger (Smart
+// Pointer). Er speichert die Daten auf dem Heap statt auf dem Stack.
+// Dadurch kannst du einen rekursiven Typ trotzdem benutzen.
+//
+// In dieser Übung baust du eine "Cons-Liste". Das ist eine Datenstruktur
+// aus der funktionalen Programmierung. Jedes Element einer Cons-Liste
+// besteht aus zwei Teilen: dem Wert des aktuellen Elements und dem
+// nächsten Element. Das allerletzte Element trägt den Wert `Nil`.
 
 // TODO: Benutze einen `Box` in der Enum-Definition, damit der Code
 // kompiliert.

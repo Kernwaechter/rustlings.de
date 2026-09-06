@@ -1,12 +1,11 @@
-// Eine imaginäre Zauberschule hat ein neues, in Rust geschriebenes System
-// zur Zeugniserstellung! Aktuell unterstützt das System nur die Erstellung
-// von Zeugnissen, bei denen die Note des Schülers numerisch dargestellt
-// wird (z. B. 1,0 -> 5,5). Die Schule vergibt aber auch alphabetische
-// Noten (A+ -> F-) und muss beide Arten von Zeugnissen ausdrucken können!
+// Eine imaginäre Zauberschule hat ein neues System zur Zeugniserstellung.
+// Es ist in Rust geschrieben! Aktuell kann das System nur Zeugnisse mit
+// einer Note in Zahlen erstellen (z. B. 1,0 -> 5,5). Die Schule vergibt
+// aber auch alphabetische Noten (A+ -> F-) und muss beide Arten von
+// Zeugnissen ausdrucken können!
 //
-// Nimm die nötigen Codeänderungen an der Struktur `ReportCard` und dem
-// impl-Block vor, um zusätzlich zu numerischen auch alphabetische
-// Zeugnisse zu unterstützen.
+// Ändere die Struktur `ReportCard` und den impl-Block so, dass sie
+// zusätzlich zu numerischen auch alphabetische Zeugnisse unterstützen.
 
 use std::fmt::Display;
 

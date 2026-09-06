@@ -1,20 +1,20 @@
 // Angenommen, wir schreiben ein Spiel, in dem man Gegenstände mit Münzen
-// kaufen kann. Alle Gegenstände kosten 5 Münzen, und bei jedem Kauf fällt
-// eine Bearbeitungsgebühr von 1 Münze an. Ein Spieler tippt ein, wie viele
-// Gegenstände er kaufen möchte, und die Funktion `total_cost` berechnet die
-// Gesamtkosten der Gegenstände. Da der Spieler die Menge eingetippt hat,
-// bekommen wir sie als String. Er könnte alles Mögliche eingetippt haben,
-// nicht nur Zahlen!
+// kaufen kann. Alle Gegenstände kosten 5 Münzen. Bei jedem Kauf kommt noch
+// eine Bearbeitungsgebühr von 1 Münze dazu.
 //
-// Im Moment behandelt diese Funktion den Fehlerfall überhaupt nicht. Was wir
-// erreichen wollen: Wenn wir die Funktion `total_cost` mit einem String
-// aufrufen, der keine Zahl ist, gibt diese Funktion einen `ParseIntError`
-// zurück. In diesem Fall wollen wir diesen Fehler sofort aus unserer
-// Funktion zurückgeben, statt zu versuchen, zu multiplizieren und zu
-// addieren.
+// Ein Spieler tippt ein, wie viele Gegenstände er kaufen möchte. Die
+// Funktion `total_cost` berechnet daraus die Gesamtkosten. Der Spieler
+// tippt die Menge aber selbst ein — deshalb bekommen wir sie als String.
+// Und ein String kann alles Mögliche enthalten, nicht nur Zahlen!
 //
-// Es gibt mindestens zwei Wege, das korrekt umzusetzen. Aber einer davon ist
-// deutlich kürzer!
+// Im Moment behandelt diese Funktion den Fehlerfall überhaupt nicht. Das
+// wollen wir ändern: Rufen wir `total_cost` mit einem String auf, der
+// keine Zahl ist, soll die Funktion einen `ParseIntError` zurückgeben.
+// Diesen Fehler wollen wir dann sofort weiterreichen, statt trotzdem zu
+// multiplizieren und zu addieren.
+//
+// Es gibt mindestens zwei Wege, das korrekt umzusetzen. Aber einer davon
+// ist deutlich kürzer!
 
 use std::num::ParseIntError;
 
