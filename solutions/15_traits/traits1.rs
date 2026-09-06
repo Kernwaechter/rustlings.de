@@ -1,3 +1,8 @@
+// Ein Trait beschreibt ein gemeinsames Verhalten, das mehrere Typen teilen
+// können — ähnlich einem Interface in anderen Programmiersprachen. Er legt
+// fest, welche Funktionen ein Typ haben muss, ohne selbst festzulegen, wie
+// sie genau funktionieren.
+//
 // Der Trait `AppendBar` hat nur eine Funktion, die "Bar" an jedes Objekt
 // anhängt, das diesen Trait implementiert.
 trait AppendBar {

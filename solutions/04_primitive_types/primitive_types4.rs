@@ -1,3 +1,7 @@
+// Ein Slice ist ein Blick auf einen zusammenhängenden Ausschnitt einer
+// Sammlung (z. B. eines Arrays) — ohne die Daten zu kopieren. Du gibst
+// dabei nur an, wo der Ausschnitt beginnt und wo er endet.
+
 fn main() {
     // Hier kannst du optional experimentieren.
 }

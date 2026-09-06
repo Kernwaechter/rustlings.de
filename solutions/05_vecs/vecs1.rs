@@ -1,3 +1,6 @@
+// Ein Vektor (`Vec`) ist eine Liste von Werten desselben Typs, die
+// wachsen und schrumpfen kann.
+
 fn elems_to_vec(a: i32, b: i32, c: i32) -> Vec<i32> {
     vec![a, b, c]
 }

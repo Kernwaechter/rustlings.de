@@ -1,3 +1,9 @@
+// In Rust hat jeder Wert genau einen Besitzer (Ownership) — die Variable,
+// die ihn gerade hält. Gibst du einen Wert an eine andere Variable oder
+// Funktion weiter, wandert der Besitz mit. Die ursprüngliche Variable
+// kannst du danach nicht mehr benutzen. Diese Übungsreihe erkundet, was
+// das für deinen Code bedeutet.
+
 // TODO: Korrigiere den Compiler-Fehler in dieser Funktion.
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
     let vec = vec;

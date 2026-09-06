@@ -99,7 +99,11 @@ eines anderen Typs zuweisen wollen. Manchmal möchte man auch bestehende
 Variablennamen wiederverwenden, weil man wie in dieser Übung nur Werte in
 andere Typen umwandelt.
 
-Zum Glück hat Rust dafür eine elegante Lösung: 'Shadowing'!
+Zum Glück hat Rust dafür eine elegante Lösung: 'Shadowing' (sinngemäß
+"Überschatten"). Du legst dabei einfach eine neue Variable mit demselben
+Namen an. Die alte Variable ist danach verdeckt, existiert im Hintergrund
+aber trotzdem noch weiter.
+
 Mehr über 'Shadowing' erfährst du im Abschnitt 'Variables and Mutability' des
 Buchs:
 https://doc.rust-lang.org/book/ch03-01-variables-and-mutability.html#shadowing
@@ -1108,7 +1112,10 @@ https://doc.rust-lang.org/book/ch16-03-shared-state.html#atomic-reference-counti
 
 Lies weiter, wenn du mehr Hinweise möchtest :)
 
-Hast du jetzt am Anfang von `main` ein `Arc<Mutex<JobStatus>>`? Etwa so:
+Hast du jetzt am Anfang von `main` ein `Arc<Mutex<JobStatus>>`? `Mutex`
+(kurz für "mutual exclusion", zu Deutsch etwa "gegenseitiger Ausschluss")
+sorgt dafür, dass jeweils nur ein Thread gleichzeitig auf die Daten
+zugreifen kann. Etwa so:
 ```
 let status = Arc::new(Mutex::new(JobStatus { jobs_done: 0 }));
 ```
@@ -1254,8 +1261,8 @@ Deine Implementierung von `FromStr` soll ein `Ok` mit einem
 stattdessen ein `Err` mit einem Fehler zurückgeben.
 
 Noch ein Hinweis: Du kannst die Methode `map_err` von `Result` mit einer
-Funktion oder einer Closure benutzen, um den Fehler von `parse::<u8>` zu
-umschließen.
+Funktion oder einer Closure (einer kleinen, namenlosen Funktion wie
+`|x| x + 1`) benutzen, um den Fehler von `parse::<u8>` zu umschließen.
 
 Und noch ein Hinweis: Wenn du in deiner Lösung Fehler mit dem
 `?`-Operator weiterreichen möchtest, wirf einen Blick auf

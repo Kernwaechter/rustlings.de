@@ -16,7 +16,9 @@ struct JobStatus {
 fn main() {
     // `Arc` reicht nicht aus, wenn du einen **veränderlichen** gemeinsam
     // genutzten Zustand willst.
-    // Wir müssen den Wert mit einem `Mutex` umschließen.
+    // Wir müssen den Wert mit einem `Mutex` umschließen: Das ist ein
+    // Schließmechanismus (Lock), der jeweils nur einem Thread gleichzeitig
+    // Zugriff auf die Daten erlaubt.
     let status = Arc::new(Mutex::new(JobStatus { jobs_done: 0 }));
     //                    ^^^^^^^^^^^                          ^
 

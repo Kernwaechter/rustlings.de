@@ -1,6 +1,7 @@
 // Der Rust-Compiler muss prüfen können, ob eine Referenz gültig ist. Nur so
 // kann er dich warnen, wenn eine Referenz zu früh ungültig wird (aus ihrem
-// Gültigkeitsbereich fällt, dem Scope).
+// Gültigkeitsbereich fällt, dem Scope). Wie lange eine Referenz gültig
+// bleibt, nennt man ihre Lifetime.
 //
 // Denk daran: Eine Referenz ist nur eine Ausleihe (Borrow). Sie besitzt
 // ihre Daten nicht selbst, sondern leiht sie sich nur. Was passiert also,

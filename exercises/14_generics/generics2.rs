@@ -1,5 +1,6 @@
-// Dieser mächtige Wrapper bietet die Möglichkeit, einen positiven
-// Ganzzahlwert zu speichern.
+// Ein Wrapper ist wie eine Hülle: Er umschließt einen anderen Wert, ohne
+// ihn selbst zu verändern. Dieser mächtige Wrapper hier speichert einen
+// positiven Ganzzahlwert.
 // TODO: Schreibe ihn mit einem generischen Typ um, sodass er JEDEN Typ
 // umschließen kann.
 struct Wrapper {
