@@ -49,8 +49,8 @@ hint = """
 Die Compiler-Meldung sagt, dass Rust den Typ der Variablenbindung `x` nicht
 mit dem hier gegebenen Wert in Einklang bringen kann.
 
-Was passiert, wenn du die erste Zeile in der `main`-Funktion mit einer
-Typ-Annotation versiehst?
+Was passiert, wenn du bei der ersten Zeile in der `main`-Funktion den Typ
+explizit angibst (Typ-Annotation)?
 
 Was, wenn du `x` einen Wert gibst?
 
@@ -116,7 +116,7 @@ Wir kennen bereits Variablen und Veränderlichkeit, aber es gibt noch eine
 weitere wichtige Art von Variable: Konstanten.
 
 Konstanten sind immer unveränderlich. Sie werden mit dem Schlüsselwort
-`const` statt `let` deklariert.
+`const` statt `let` angelegt (deklariert).
 
 Der Typ von Konstanten muss immer angegeben werden.
 
@@ -143,9 +143,9 @@ name = "functions2"
 dir = "02_functions"
 test = false
 hint = """
-Rust verlangt, dass alle Teile der Signatur einer Funktion mit
-Typ-Annotationen versehen sind, aber `call_me` fehlt die Typ-Annotation von
-`num`.
+Rust verlangt, dass der Typ bei allen Teilen der Signatur einer Funktion
+explizit angegeben wird (Typ-Annotationen), aber bei `call_me` fehlt die
+Typangabe von `num`.
 """
 
 [[exercises]]
@@ -247,8 +247,8 @@ dir = "04_primitive_types"
 test = false
 hint = """
 Es gibt eine Kurzschreibweise, um Arrays mit einer bestimmten Größe zu
-initialisieren, ohne 100 Elemente einzeln eintippen zu müssen (auch wenn du
-das natürlich gerne tun kannst!).
+befüllen (initialisieren), ohne 100 Elemente einzeln eintippen zu müssen
+(auch wenn du das natürlich gerne tun kannst!).
 
 Zum Beispiel geht das so:
 ```
@@ -427,11 +427,12 @@ https://doc.rust-lang.org/book/ch05-01-defining-structs.html
 name = "structs2"
 dir = "07_structs"
 hint = """
-Instanzen von Structs zu erzeugen ist einfach — du musst nur seinen Feldern
-Werte zuweisen.
+Ein Struct mit Werten zu füllen (eine Instanz zu erzeugen) ist einfach —
+du musst nur seinen Feldern Werte zuweisen.
 
-Es gibt allerdings ein paar Abkürzungen, die man beim Instanziieren von
-Structs nehmen kann. Schau in „The Book“, um mehr zu erfahren:
+Es gibt allerdings ein paar Abkürzungen, die man beim Anlegen
+(Instanziieren) von Structs nehmen kann. Schau in „The Book“, um mehr zu
+erfahren:
 https://doc.rust-lang.org/book/ch05-01-defining-structs.html#creating-instances-from-other-instances-with-struct-update-syntax
 """
 
@@ -573,7 +574,7 @@ name = "modules3"
 dir = "10_modules"
 test = false
 hint = """
-`UNIX_EPOCH` und `SystemTime` sind im Modul `std::time` deklariert. Füge
+`UNIX_EPOCH` und `SystemTime` sind im Modul `std::time` enthalten (dort deklariert). Füge
 eine `use`-Anweisung für die beiden hinzu, um sie in den Scope zu holen. Du
 kannst verschachtelte Pfade benutzen, um beide mit nur einer Zeile
 hereinzuholen.
@@ -708,7 +709,7 @@ gebraucht wird.
 name = "errors4"
 dir = "13_error_handling"
 hint = """
-`PositiveNonzeroInteger::new` erzeugt immer eine neue Instanz und gibt ein
+`PositiveNonzeroInteger::new` erzeugt immer ein neues Objekt (eine Instanz) und gibt ein
 `Ok`-Ergebnis zurück. Stattdessen sollte sie Prüfungen durchführen, einen
 `Err` zurückgeben, wenn diese Prüfungen fehlschlagen, und nur dann einen
 `Ok` zurückgeben, wenn diese Prüfungen ergeben, dass alles … okay ist :)
@@ -721,14 +722,15 @@ test = false
 hint = """
 Innerhalb der `main`-Funktion werden zwei verschiedene mögliche
 `Result`-Typen erzeugt, die mit dem `?`-Operator weitergereicht werden.
-Wie deklarieren wir einen Rückgabetyp für die `main`-Funktion, der beide
-zulässt?
+Wie legen wir einen Rückgabetyp für die `main`-Funktion fest (deklarieren
+ihn), der beide zulässt?
 
 Unter der Haube ruft der `?`-Operator `From::from` auf dem Fehlerwert auf,
 um ihn in ein geboxtes Trait-Objekt umzuwandeln, ein `Box<dyn Error>`.
-Dieses geboxte Trait-Objekt ist polymorph, und da alle Fehler den Trait
-`Error` implementieren, können wir viele verschiedene Fehler in einem
-einzigen `Box`-Objekt einfangen.
+Dieses geboxte Trait-Objekt kann viele verschiedene Formen annehmen (man
+nennt das polymorph), und da alle Fehler den Trait `Error` implementieren,
+können wir viele verschiedene Fehler in einem einzigen `Box`-Objekt
+einfangen.
 
 Schau dir diesen Abschnitt von „The Book“ an:
 https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html#a-shortcut-for-propagating-errors-the--operator
@@ -767,7 +769,8 @@ Typ zu erzeugen.
 Wenn der Vektor `numbers` den Typ `Vec<T>` hat, können wir nur Werte vom
 Typ `T` hineinschieben. Indem wir vor dem Einfügen `into()` benutzen,
 bitten wir den Compiler, `n1` und `n2` nach `T` umzuwandeln. Aber der
-Compiler weiß noch nicht, was `T` ist, und braucht eine Typ-Annotation.
+Compiler weiß noch nicht, was `T` ist — du musst den Typ explizit angeben
+(Typ-Annotation).
 
 `u8` und `i8` lassen sich beide nach `i16`, `i32` und `i64` umwandeln.
 Wähle einen davon für den generischen Typ des Vektors.
@@ -858,8 +861,8 @@ bekommt, der dem kleineren der Lifetimes von `x` und `y` entspricht.
 
 Es gibt mindestens zwei Wege, das gewünschte Ergebnis zu erreichen und
 dabei den inneren Block zu behalten:
-1. Verschiebe die Deklaration von `string2`, damit sie so lange lebt wie
-   `string1` (wie ist `result` deklariert?)
+1. Verschiebe die Zeile, in der `string2` angelegt wird (ihre Deklaration),
+   damit sie so lange lebt wie `string1` (wie wurde `result` angelegt?)
 2. Verschiebe `println!` in den inneren Block
 """
 
@@ -941,9 +944,9 @@ Benutze `char::to_uppercase`. Es gibt einen Iterator zurück, der in einen
 
 `capitalize_words_vector`:
 
-Erzeuge einen Iterator aus dem Slice. Transformiere die iterierten Werte,
-indem du die Funktion `capitalize_first` anwendest. Denk daran, den
-Iterator mit `collect` einzusammeln.
+Erzeuge einen Iterator aus dem Slice. Wandle die iterierten Werte um
+(transformiere sie), indem du die Funktion `capitalize_first` anwendest.
+Denk daran, den Iterator mit `collect` einzusammeln.
 
 `capitalize_words_string`:
 
@@ -1186,8 +1189,9 @@ dir = "22_clippy"
 test = false
 strict_clippy = true
 hint = """
-Rust speichert die Version mit der höchsten Präzision einiger langer oder
-unendlich präziser mathematischer Konstanten in der Rust-Standardbibliothek:
+Rust speichert die genaueste Version (mit der höchsten Präzision) einiger
+langer oder unendlich genauer mathematischer Konstanten in der
+Rust-Standardbibliothek:
 https://doc.rust-lang.org/stable/std/f32/consts/index.html
 
 Wir könnten versucht sein, unsere eigenen Näherungswerte für bestimmte

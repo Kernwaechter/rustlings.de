@@ -7,7 +7,7 @@
 use std::collections::HashMap;
 
 fn fruit_basket() -> HashMap<String, u32> {
-    // Deklariere die Hashmap.
+    // Lege die Hashmap an (Deklaration).
     let mut basket = HashMap::new();
 
     // Zwei Bananen sind schon für dich vorgegeben :)

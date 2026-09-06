@@ -1,7 +1,8 @@
 // Structs enthalten Daten, können aber auch Logik haben. In dieser Übung
 // haben wir das Struct `Fireworks` definiert sowie ein paar Funktionen, die
 // damit arbeiten. Verwandle diese freistehenden Funktionen in Methoden und
-// assoziierte Funktionen, um diese Beziehung im Code klarer auszudrücken.
+// in Funktionen, die zum Typ gehören (assoziierte Funktionen), um diese
+// Beziehung im Code klarer auszudrücken.
 
 #![deny(clippy::use_self)] // üben, den Typ `Self` zu benutzen
 
@@ -10,7 +11,7 @@ struct Fireworks {
     rockets: usize,
 }
 
-// TODO: Verwandle diese Funktion in eine assoziierte Funktion von `Fireworks`.
+// TODO: Verwandle diese Funktion in eine Funktion, die zum Typ `Fireworks` gehört (assoziierte Funktion).
 fn new_fireworks() -> Fireworks {
     Fireworks { rockets: 0 }
 }

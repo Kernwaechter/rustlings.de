@@ -18,7 +18,7 @@ mod tests {
 
     #[test]
     fn regular_structs() {
-        // TODO: Erzeuge eine Instanz eines regulären Structs.
+        // TODO: Erzeuge ein reguläres Struct mit Werten (eine Instanz).
         // let green =
 
         assert_eq!(green.red, 0);
@@ -28,7 +28,7 @@ mod tests {
 
     #[test]
     fn tuple_structs() {
-        // TODO: Erzeuge eine Instanz eines Tupel-Structs.
+        // TODO: Erzeuge ein Tupel-Struct mit Werten (eine Instanz).
         // let green =
 
         assert_eq!(green.0, 0);
@@ -38,7 +38,7 @@ mod tests {
 
     #[test]
     fn unit_structs() {
-        // TODO: Erzeuge eine Instanz eines Unit-Structs.
+        // TODO: Erzeuge ein Unit-Struct (eine Instanz).
         // let unit_struct =
         let message = format!("{unit_struct:?}s are fun!");
 

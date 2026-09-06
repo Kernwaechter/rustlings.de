@@ -27,7 +27,7 @@ async fn calculate_mean_score(scores_file: &str) -> usize {
     // Lies die Datei asynchron ein
     let file = tokio::fs::read_to_string(scores_file).await.unwrap();
 
-    // Initialisiere die Summe und die Anzahl der Werte
+    // Setze die Summe und die Anzahl der Werte auf einen Startwert (Initialisierung)
     let mut sum = 0;
     let mut n = 0;
     for line in file.lines() {

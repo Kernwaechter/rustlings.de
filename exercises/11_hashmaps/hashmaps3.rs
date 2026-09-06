@@ -29,7 +29,7 @@ fn build_score_table(results: &str) -> HashMap<&str, TeamScores> {
         let team_1_score: u8 = split_iterator.next().unwrap().parse().unwrap();
         let team_2_score: u8 = split_iterator.next().unwrap().parse().unwrap();
 
-        // TODO: Befülle die Ergebnistabelle mit den extrahierten Details.
+        // TODO: Befülle die Ergebnistabelle mit den herausgelesenen Details (extrahiert).
         // Denk daran: Die von Team 1 geschossenen Tore sind die von Team 2
         // kassierten Tore. Genauso sind die von Team 2 geschossenen Tore die
         // von Team 1 kassierten Tore.

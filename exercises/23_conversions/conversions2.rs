@@ -13,7 +13,7 @@ struct Fahrenheit(f64);
 
 impl From<Celsius> for Fahrenheit {
     // TODO: Wandle Celsius in Fahrenheit um. Mach dir keine Sorgen um die
-    // Fließkomma-Präzision. Die Formel lautet: F = C * 1.8 + 32
+    // Genauigkeit der Fließkommazahlen (Präzision). Die Formel lautet: F = C * 1.8 + 32
 }
 
 impl From<Fahrenheit> for Celsius {

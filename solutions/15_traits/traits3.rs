@@ -1,4 +1,4 @@
-#![allow(dead_code)] // version_number wird nur zum Konstruieren gebraucht, nie gelesen.
+#![allow(dead_code)] // version_number wird nur beim Erzeugen gebraucht, nie gelesen.
 
 trait Licensed {
     fn licensing_info(&self) -> String {

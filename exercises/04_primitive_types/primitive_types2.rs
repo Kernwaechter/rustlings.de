@@ -12,8 +12,8 @@ fn main() {
         println!("Weder alphabetisch noch numerisch!");
     }
 
-    // TODO: Deklariere unten, analog zum Beispiel oben, eine Variable namens
-    // `your_character` mit deinem Lieblingszeichen.
+    // TODO: Lege unten, analog zum Beispiel oben, eine Variable namens
+    // `your_character` mit deinem Lieblingszeichen an (deklariere sie).
     // Probier einen Buchstaben, probier eine Ziffer (in einfachen Anführungszeichen), probier
     // ein Sonderzeichen, probier ein Zeichen aus einer anderen Sprache als deiner eigenen,
     // probier ein Emoji 😉

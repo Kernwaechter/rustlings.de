@@ -1,6 +1,6 @@
 fn main() {
-    // Der einfachste Weg, den Compiler-Fehler zu beheben, ist, die Variable
-    // `x` zu initialisieren. Wenn du ihren Wert auf eine Ganzzahl setzt,
+    // Der einfachste Weg, den Compiler-Fehler zu beheben, ist, der Variable
+    // `x` einen Wert zu geben (sie zu initialisieren). Wenn du ihren Wert auf eine Ganzzahl setzt,
     // leitet Rust ihren Typ als `i32` ab — das ist der Standardtyp für
     // Ganzzahlen.
     let x = 42;

@@ -8,7 +8,7 @@
 // Kurz gesagt: Dieser Anwendungsfall für Boxen ist dafür da, wenn du einen
 // Wert besitzen möchtest und dir nur wichtig ist, dass es sich um einen Typ
 // handelt, der einen bestimmten Trait implementiert. Dazu wird die `Box` als
-// Typ `Box<dyn Trait>` deklariert, wobei `Trait` der Trait ist, nach dem der
+// Typ `Box<dyn Trait>` festgelegt (deklariert), wobei `Trait` der Trait ist, nach dem der
 // Compiler bei jedem in diesem Kontext verwendeten Wert sucht. In dieser
 // Übung sind das die möglichen Fehler, die ein `Result` zurückgeben kann.
 
