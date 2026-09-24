@@ -125,18 +125,24 @@ rustlings richtet sich an Programmieranfänger. Deshalb:
   `--edition 2024` formatiert teils anders, als `rustlings dev check` es
   erwartet (aufgefallen, als deutsche Ländernamen eine Zeile länger als das
   Original machten). Immer mit `rustfmt --edition 2024 <Datei>` arbeiten.
-- **Community-Exercise-Ordner sind strikt:** `rustlings dev check`
-  akzeptiert in `exercises/<Sektor>/` nur `.rs`-Dateien und `README.md` —
-  keine zusätzlichen Datendateien. Falls eine Übung wie `24_async/async1`
-  zur Laufzeit externe Dateien liest (`tokio::fs::read_to_string(...)` mit
-  einem nackten Dateinamen), werden diese relativ zum Arbeitsverzeichnis
-  aufgelöst, aus dem `rustlings` selbst gestartet wird — also dem
-  Projekt-Root, nicht dem Übungsordner. Deshalb liegen
-  `scores_class_a/b/c.txt` im Projekt-Root. Upstream scheint das inzwischen
-  über ein neueres `input_files`-Feld in `info.toml` zu lösen; ob die
-  installierte rustlings-Version das schon unterstützt, vorher prüfen
-  (`grep input_files` im installierten `rustlings`-Quelltext oder
-  ausprobieren).
+- **Eingabedateien von Übungen (Übergangslösung bis rustlings v7):**
+  `24_async/async1` liest `scores_class_a/b/c.txt` mit einem nackten
+  Dateinamen ein. Wo dieser gesucht wird, hängt von der rustlings-Version ab:
+  - **rustlings 6.5.0** (aktuelles Release) startet Übungen im Projekt-Root.
+    Sein `rustlings dev check` akzeptiert in `exercises/<Sektor>/` nur
+    `.rs`-Dateien und `README.md`.
+  - **rustlings `main`** (voraussichtlich v7) startet Übungen im
+    Übungsordner und erlaubt dort Dateien, die in `info.toml` unter
+    `input_files` stehen.
+
+  Damit Lernende mit beiden Versionen arbeiten können, liegen die Dateien
+  **doppelt** vor: in `exercises/24_async/` (mit `input_files` in
+  `info.toml`) und als Kopie im Projekt-Root. Deshalb schlägt
+  `rustlings dev check` mit 6.5.0 fehl; zum Prüfen die `main`-Version
+  verwenden
+  (`cargo install --git https://github.com/rust-lang/rustlings rustlings`).
+  Sobald v7 erscheint, die Kopien im Root löschen und diesen Absatz
+  kürzen.
 
 ## Lizenz
 

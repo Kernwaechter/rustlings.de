@@ -1319,6 +1319,7 @@ Das brauchst du eventuell:
 name = "async1"
 dir = "24_async"
 test = false
+input_files = ["scores_class_a.txt", "scores_class_b.txt", "scores_class_c.txt"]
 hint = """
 Asynchrone Runtimes wie tokio können nur Tasks starten, die als
 async-Funktionen definiert sind, nicht als gewöhnliche. Füge das
