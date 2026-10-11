@@ -6,7 +6,8 @@ kleiner Übungen, um dich an das Lesen und Schreiben von Rust-Code zu gewöhnen.
 Dies ist eine inoffizielle Community-Übersetzung, gelistet (nach Aufnahme) auf der
 offiziellen [Community-Exercises-Seite](https://rustlings.rust-lang.org/community-exercises)
 von Rustlings. Struktur, Code und Tests entsprechen dem Original — übersetzt sind die
-Aufgabenstellungen, Kommentare und Hinweise.
+Aufgabenstellungen, Kommentare und Hinweise. Dabei hat die KI die erste Grundübersetzung erledigt.
+Von mir wurden alle Übersetzungen noch einmal nachgearbeitet.
 
 ## Loslegen
 
